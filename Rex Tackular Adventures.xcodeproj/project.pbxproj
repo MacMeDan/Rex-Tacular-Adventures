@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3738AE801D3D888600BBC67D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE7F1D3D888600BBC67D /* AppDelegate.swift */; };
+		3738AE871D3D888600BBC67D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3738AE861D3D888600BBC67D /* Assets.xcassets */; };
+		3738AE8A1D3D888600BBC67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738AE881D3D888600BBC67D /* LaunchScreen.storyboard */; };
+		3738AE951D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE941D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift */; };
+		3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */; };
+		3738AEA21D3D8D5800BBC67D /* animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AEA11D3D8D5800BBC67D /* animals.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3738AE911D3D888600BBC67D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3738AE741D3D888500BBC67D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3738AE7B1D3D888600BBC67D;
+			remoteInfo = "Rex Tackular Adventures";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3738AE7C1D3D888600BBC67D /* Rex Tackular Adventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rex Tackular Adventures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3738AE7F1D3D888600BBC67D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3738AE861D3D888600BBC67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3738AE891D3D888600BBC67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3738AE8B1D3D888600BBC67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3738AE901D3D888600BBC67D /* Rex Tackular AdventuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rex Tackular AdventuresTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3738AE941D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rex_Tackular_AdventuresTests.swift; sourceTree = "<group>"; };
+		3738AE961D3D888600BBC67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalCollectionViewController.swift; sourceTree = "<group>"; };
+		3738AEA11D3D8D5800BBC67D /* animals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animals.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3738AE791D3D888600BBC67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3738AE8D1D3D888600BBC67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3738AE731D3D888500BBC67D = {
+			isa = PBXGroup;
+			children = (
+				3738AE7E1D3D888600BBC67D /* Rex Tackular Adventures */,
+				3738AE931D3D888600BBC67D /* Rex Tackular AdventuresTests */,
+				3738AE7D1D3D888600BBC67D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3738AE7D1D3D888600BBC67D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3738AE7C1D3D888600BBC67D /* Rex Tackular Adventures.app */,
+				3738AE901D3D888600BBC67D /* Rex Tackular AdventuresTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3738AE7E1D3D888600BBC67D /* Rex Tackular Adventures */ = {
+			isa = PBXGroup;
+			children = (
+				3738AE7F1D3D888600BBC67D /* AppDelegate.swift */,
+				3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */,
+				3738AEA11D3D8D5800BBC67D /* animals.swift */,
+				3738AE861D3D888600BBC67D /* Assets.xcassets */,
+				3738AE881D3D888600BBC67D /* LaunchScreen.storyboard */,
+				3738AE8B1D3D888600BBC67D /* Info.plist */,
+			);
+			path = "Rex Tackular Adventures";
+			sourceTree = "<group>";
+		};
+		3738AE931D3D888600BBC67D /* Rex Tackular AdventuresTests */ = {
+			isa = PBXGroup;
+			children = (
+				3738AE941D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift */,
+				3738AE961D3D888600BBC67D /* Info.plist */,
+			);
+			path = "Rex Tackular AdventuresTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3738AE7B1D3D888600BBC67D /* Rex Tackular Adventures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3738AE991D3D888600BBC67D /* Build configuration list for PBXNativeTarget "Rex Tackular Adventures" */;
+			buildPhases = (
+				3738AE781D3D888600BBC67D /* Sources */,
+				3738AE791D3D888600BBC67D /* Frameworks */,
+				3738AE7A1D3D888600BBC67D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rex Tackular Adventures";
+			productName = "Rex Tackular Adventures";
+			productReference = 3738AE7C1D3D888600BBC67D /* Rex Tackular Adventures.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3738AE8F1D3D888600BBC67D /* Rex Tackular AdventuresTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3738AE9C1D3D888600BBC67D /* Build configuration list for PBXNativeTarget "Rex Tackular AdventuresTests" */;
+			buildPhases = (
+				3738AE8C1D3D888600BBC67D /* Sources */,
+				3738AE8D1D3D888600BBC67D /* Frameworks */,
+				3738AE8E1D3D888600BBC67D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3738AE921D3D888600BBC67D /* PBXTargetDependency */,
+			);
+			name = "Rex Tackular AdventuresTests";
+			productName = "Rex Tackular AdventuresTests";
+			productReference = 3738AE901D3D888600BBC67D /* Rex Tackular AdventuresTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3738AE741D3D888500BBC67D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = MacMeDan;
+				TargetAttributes = {
+					3738AE7B1D3D888600BBC67D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					3738AE8F1D3D888600BBC67D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3738AE7B1D3D888600BBC67D;
+					};
+				};
+			};
+			buildConfigurationList = 3738AE771D3D888500BBC67D /* Build configuration list for PBXProject "Rex Tackular Adventures" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3738AE731D3D888500BBC67D;
+			productRefGroup = 3738AE7D1D3D888600BBC67D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3738AE7B1D3D888600BBC67D /* Rex Tackular Adventures */,
+				3738AE8F1D3D888600BBC67D /* Rex Tackular AdventuresTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3738AE7A1D3D888600BBC67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3738AE8A1D3D888600BBC67D /* LaunchScreen.storyboard in Resources */,
+				3738AE871D3D888600BBC67D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3738AE8E1D3D888600BBC67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3738AE781D3D888600BBC67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3738AEA21D3D8D5800BBC67D /* animals.swift in Sources */,
+				3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */,
+				3738AE801D3D888600BBC67D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3738AE8C1D3D888600BBC67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3738AE951D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3738AE921D3D888600BBC67D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3738AE7B1D3D888600BBC67D /* Rex Tackular Adventures */;
+			targetProxy = 3738AE911D3D888600BBC67D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3738AE881D3D888600BBC67D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3738AE891D3D888600BBC67D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3738AE971D3D888600BBC67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3738AE981D3D888600BBC67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3738AE9A1D3D888600BBC67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Rex Tackular Adventures/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MacMeDan.Rex-Tackular-Adventures";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		3738AE9B1D3D888600BBC67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Rex Tackular Adventures/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MacMeDan.Rex-Tackular-Adventures";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		3738AE9D1D3D888600BBC67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Rex Tackular AdventuresTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MacMeDan.Rex-Tackular-AdventuresTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rex Tackular Adventures.app/Rex Tackular Adventures";
+			};
+			name = Debug;
+		};
+		3738AE9E1D3D888600BBC67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Rex Tackular AdventuresTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MacMeDan.Rex-Tackular-AdventuresTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rex Tackular Adventures.app/Rex Tackular Adventures";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3738AE771D3D888500BBC67D /* Build configuration list for PBXProject "Rex Tackular Adventures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3738AE971D3D888600BBC67D /* Debug */,
+				3738AE981D3D888600BBC67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3738AE991D3D888600BBC67D /* Build configuration list for PBXNativeTarget "Rex Tackular Adventures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3738AE9A1D3D888600BBC67D /* Debug */,
+				3738AE9B1D3D888600BBC67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3738AE9C1D3D888600BBC67D /* Build configuration list for PBXNativeTarget "Rex Tackular AdventuresTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3738AE9D1D3D888600BBC67D /* Debug */,
+				3738AE9E1D3D888600BBC67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3738AE741D3D888500BBC67D /* Project object */;
+}
