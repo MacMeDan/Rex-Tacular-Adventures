@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Material
 
 private let reuseIdentifier = "Cell"
 
 class InitalCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     private var collectionView: UICollectionView?
-    private let animals: [Animal] = [.Dog, .Cat, .Tiger, .Lion, .Hippo, .Bear, .Panda, .Mouse, .Ape, .Crockodile, .Fox, .Moose, .Pig, .Sheep, .Bird, .Rino, .Garaff, .Elephant]
+    private let games: [Games] = [.animals]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,16 +49,38 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
     // MARK: UICollectionViewDataSource
 
      func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return games.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let game = games[indexPath.row]
+        getViewForGame(game)
     }
 
      func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.redColor()
-        let animal = animals[indexPath.row]
-        let label = UILabel()
-        label.text = animal.rawValue
+        let game = games[indexPath.row]
+        let button = FabButton()
+        button.backgroundColor = MaterialColor.pink.accent1
+        button.setImage(UIImage(named: "Pig"), forState: .Normal)
+        cell.addSubview(button)
+        cell.layout(button).center(offsetY: -10)
+        
+        cell.backgroundColor = MaterialColor.lightBlue.base
+        let label = MaterialLabel(frame: CGRect(x: 0, y: cell.frame.height - 30, width: cell.frame.width, height: 40))
+        label.text = game.rawValue
+        label.textAlignment = .Center
+        label.textColor = MaterialColor.white
         cell.addSubview(label)
         return cell
+    }
+    
+    func getViewForGame(game: Games) {
+        switch game {
+        case .animals:
+            self.navigationController?.pushViewController(AnimalGameViewController(), animated: true)
+        default:
+            return
+        }
     }
 }

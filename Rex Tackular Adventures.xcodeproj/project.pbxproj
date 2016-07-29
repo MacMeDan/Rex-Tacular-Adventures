@@ -13,6 +13,10 @@
 		3738AE951D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE941D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift */; };
 		3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */; };
 		3738AEA21D3D8D5800BBC67D /* animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AEA11D3D8D5800BBC67D /* animals.swift */; };
+		37F4128F1D4BEEDF00E6B937 /* AnimalGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4128E1D4BEEDF00E6B937 /* AnimalGameViewController.swift */; };
+		37F412CD1D4BFDC000E6B937 /* AnimalGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F412CC1D4BFDC000E6B937 /* AnimalGameScene.swift */; };
+		913048DDBC9F7BCDF5CBC70B /* Pods_Rex_Tackular_AdventuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A737C7124649EA0DB7665E /* Pods_Rex_Tackular_AdventuresTests.framework */; };
+		DB77029ADCF85807AA0C5C6C /* Pods_Rex_Tackular_Adventures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A126F2762880DB5ED05A2D50 /* Pods_Rex_Tackular_Adventures.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D58DEAABF7E222648F03C86 /* Pods-Rex Tackular Adventures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rex Tackular Adventures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rex Tackular Adventures/Pods-Rex Tackular Adventures.debug.xcconfig"; sourceTree = "<group>"; };
 		3738AE7C1D3D888600BBC67D /* Rex Tackular Adventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rex Tackular Adventures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738AE7F1D3D888600BBC67D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3738AE861D3D888600BBC67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +41,13 @@
 		3738AE961D3D888600BBC67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalCollectionViewController.swift; sourceTree = "<group>"; };
 		3738AEA11D3D8D5800BBC67D /* animals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animals.swift; sourceTree = "<group>"; };
+		37F4128E1D4BEEDF00E6B937 /* AnimalGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGameViewController.swift; sourceTree = "<group>"; };
+		37F412CC1D4BFDC000E6B937 /* AnimalGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGameScene.swift; sourceTree = "<group>"; };
+		5199F79C68F9841E2C337F33 /* Pods-Rex Tackular AdventuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rex Tackular AdventuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rex Tackular AdventuresTests/Pods-Rex Tackular AdventuresTests.release.xcconfig"; sourceTree = "<group>"; };
+		70A737C7124649EA0DB7665E /* Pods_Rex_Tackular_AdventuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rex_Tackular_AdventuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A126F2762880DB5ED05A2D50 /* Pods_Rex_Tackular_Adventures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rex_Tackular_Adventures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6919469FB425D5D59813E4F /* Pods-Rex Tackular AdventuresTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rex Tackular AdventuresTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rex Tackular AdventuresTests/Pods-Rex Tackular AdventuresTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF5A1202828CCA04FC6F6C4B /* Pods-Rex Tackular Adventures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rex Tackular Adventures.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rex Tackular Adventures/Pods-Rex Tackular Adventures.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB77029ADCF85807AA0C5C6C /* Pods_Rex_Tackular_Adventures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913048DDBC9F7BCDF5CBC70B /* Pods_Rex_Tackular_AdventuresTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +76,8 @@
 				3738AE7E1D3D888600BBC67D /* Rex Tackular Adventures */,
 				3738AE931D3D888600BBC67D /* Rex Tackular AdventuresTests */,
 				3738AE7D1D3D888600BBC67D /* Products */,
+				E24EFB326857C1EE281B4419 /* Pods */,
+				D6BA630E4BA697B8B444A6F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,7 +95,9 @@
 			children = (
 				3738AE7F1D3D888600BBC67D /* AppDelegate.swift */,
 				3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */,
+				37F4128E1D4BEEDF00E6B937 /* AnimalGameViewController.swift */,
 				3738AEA11D3D8D5800BBC67D /* animals.swift */,
+				37F412CC1D4BFDC000E6B937 /* AnimalGameScene.swift */,
 				3738AE861D3D888600BBC67D /* Assets.xcassets */,
 				3738AE881D3D888600BBC67D /* LaunchScreen.storyboard */,
 				3738AE8B1D3D888600BBC67D /* Info.plist */,
@@ -96,6 +114,26 @@
 			path = "Rex Tackular AdventuresTests";
 			sourceTree = "<group>";
 		};
+		D6BA630E4BA697B8B444A6F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A126F2762880DB5ED05A2D50 /* Pods_Rex_Tackular_Adventures.framework */,
+				70A737C7124649EA0DB7665E /* Pods_Rex_Tackular_AdventuresTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E24EFB326857C1EE281B4419 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D58DEAABF7E222648F03C86 /* Pods-Rex Tackular Adventures.debug.xcconfig */,
+				FF5A1202828CCA04FC6F6C4B /* Pods-Rex Tackular Adventures.release.xcconfig */,
+				B6919469FB425D5D59813E4F /* Pods-Rex Tackular AdventuresTests.debug.xcconfig */,
+				5199F79C68F9841E2C337F33 /* Pods-Rex Tackular AdventuresTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3738AE991D3D888600BBC67D /* Build configuration list for PBXNativeTarget "Rex Tackular Adventures" */;
 			buildPhases = (
+				46D3CD20FE3E1291E8130BC6 /* [CP] Check Pods Manifest.lock */,
 				3738AE781D3D888600BBC67D /* Sources */,
 				3738AE791D3D888600BBC67D /* Frameworks */,
 				3738AE7A1D3D888600BBC67D /* Resources */,
+				B9DFD6AB590FDEDAB672EAAA /* [CP] Embed Pods Frameworks */,
+				5D17443155C812872C1CACFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3738AE9C1D3D888600BBC67D /* Build configuration list for PBXNativeTarget "Rex Tackular AdventuresTests" */;
 			buildPhases = (
+				CE92BD670198E58C25D51297 /* [CP] Check Pods Manifest.lock */,
 				3738AE8C1D3D888600BBC67D /* Sources */,
 				3738AE8D1D3D888600BBC67D /* Frameworks */,
 				3738AE8E1D3D888600BBC67D /* Resources */,
+				DA50FD4090CD828AF32A0EDC /* [CP] Embed Pods Frameworks */,
+				AB023EE08821D085E9B9AB3A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,13 +235,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46D3CD20FE3E1291E8130BC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D17443155C812872C1CACFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rex Tackular Adventures/Pods-Rex Tackular Adventures-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB023EE08821D085E9B9AB3A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rex Tackular AdventuresTests/Pods-Rex Tackular AdventuresTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9DFD6AB590FDEDAB672EAAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rex Tackular Adventures/Pods-Rex Tackular Adventures-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE92BD670198E58C25D51297 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA50FD4090CD828AF32A0EDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rex Tackular AdventuresTests/Pods-Rex Tackular AdventuresTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3738AE781D3D888600BBC67D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F4128F1D4BEEDF00E6B937 /* AnimalGameViewController.swift in Sources */,
 				3738AEA21D3D8D5800BBC67D /* animals.swift in Sources */,
 				3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */,
+				37F412CD1D4BFDC000E6B937 /* AnimalGameScene.swift in Sources */,
 				3738AE801D3D888600BBC67D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +458,7 @@
 		};
 		3738AE9A1D3D888600BBC67D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D58DEAABF7E222648F03C86 /* Pods-Rex Tackular Adventures.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -333,6 +473,7 @@
 		};
 		3738AE9B1D3D888600BBC67D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF5A1202828CCA04FC6F6C4B /* Pods-Rex Tackular Adventures.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -347,6 +488,7 @@
 		};
 		3738AE9D1D3D888600BBC67D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6919469FB425D5D59813E4F /* Pods-Rex Tackular AdventuresTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Rex Tackular AdventuresTests/Info.plist";
@@ -359,6 +501,7 @@
 		};
 		3738AE9E1D3D888600BBC67D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5199F79C68F9841E2C337F33 /* Pods-Rex Tackular AdventuresTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Rex Tackular AdventuresTests/Info.plist";
@@ -388,6 +531,7 @@
 				3738AE9B1D3D888600BBC67D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3738AE9C1D3D888600BBC67D /* Build configuration list for PBXNativeTarget "Rex Tackular AdventuresTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +540,7 @@
 				3738AE9E1D3D888600BBC67D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

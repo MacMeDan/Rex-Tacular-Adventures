@@ -26,3 +26,9 @@ public enum Animal: String {
     case Garaff     = "Garaff"
     case Elephant   = "Elephant"
 }
+
+public enum Games: String {
+    case numbers    = "Numbers"
+    case shapes     = "Shapes"
+    case animals    = "Animals"
+}
