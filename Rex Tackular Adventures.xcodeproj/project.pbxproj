@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370055FF1D541B8700F875B8 /* StandingAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370055FE1D541B8700F875B8 /* StandingAnimalViewController.swift */; };
+		370056011D541C7800F875B8 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370056001D541C7800F875B8 /* Public.swift */; };
+		372C63361D4E7AC300EB32A8 /* AnimalGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */; };
 		3738AE801D3D888600BBC67D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE7F1D3D888600BBC67D /* AppDelegate.swift */; };
 		3738AE871D3D888600BBC67D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3738AE861D3D888600BBC67D /* Assets.xcassets */; };
 		3738AE8A1D3D888600BBC67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738AE881D3D888600BBC67D /* LaunchScreen.storyboard */; };
 		3738AE951D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE941D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift */; };
 		3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */; };
 		3738AEA21D3D8D5800BBC67D /* animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AEA11D3D8D5800BBC67D /* animals.swift */; };
-		37F4128F1D4BEEDF00E6B937 /* AnimalGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F4128E1D4BEEDF00E6B937 /* AnimalGameViewController.swift */; };
-		37F412CD1D4BFDC000E6B937 /* AnimalGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F412CC1D4BFDC000E6B937 /* AnimalGameScene.swift */; };
+		37F2263D1D542D3E0072FC84 /* BirdAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2263C1D542D3E0072FC84 /* BirdAnimationView.swift */; };
+		37F226541D554E240072FC84 /* Door.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F2264F1D554E240072FC84 /* Door.png */; };
+		37F226551D554E240072FC84 /* Foot.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226501D554E240072FC84 /* Foot.png */; };
+		37F226561D554E240072FC84 /* LargeBody.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226511D554E240072FC84 /* LargeBody.png */; };
+		37F2265B1D554E930072FC84 /* CrateAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F226591D554E930072FC84 /* CrateAnimationsView.swift */; };
+		37F226631D5550290072FC84 /* Opencrate.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226621D5550290072FC84 /* Opencrate.png */; };
 		913048DDBC9F7BCDF5CBC70B /* Pods_Rex_Tackular_AdventuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A737C7124649EA0DB7665E /* Pods_Rex_Tackular_AdventuresTests.framework */; };
 		DB77029ADCF85807AA0C5C6C /* Pods_Rex_Tackular_Adventures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A126F2762880DB5ED05A2D50 /* Pods_Rex_Tackular_Adventures.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		2D58DEAABF7E222648F03C86 /* Pods-Rex Tackular Adventures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rex Tackular Adventures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rex Tackular Adventures/Pods-Rex Tackular Adventures.debug.xcconfig"; sourceTree = "<group>"; };
+		370055FE1D541B8700F875B8 /* StandingAnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingAnimalViewController.swift; sourceTree = "<group>"; };
+		370056001D541C7800F875B8 /* Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Public.swift; sourceTree = "<group>"; };
+		372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGameViewController.swift; sourceTree = "<group>"; };
 		3738AE7C1D3D888600BBC67D /* Rex Tackular Adventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rex Tackular Adventures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3738AE7F1D3D888600BBC67D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3738AE861D3D888600BBC67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,8 +51,12 @@
 		3738AE961D3D888600BBC67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalCollectionViewController.swift; sourceTree = "<group>"; };
 		3738AEA11D3D8D5800BBC67D /* animals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animals.swift; sourceTree = "<group>"; };
-		37F4128E1D4BEEDF00E6B937 /* AnimalGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGameViewController.swift; sourceTree = "<group>"; };
-		37F412CC1D4BFDC000E6B937 /* AnimalGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGameScene.swift; sourceTree = "<group>"; };
+		37F2263C1D542D3E0072FC84 /* BirdAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdAnimationView.swift; sourceTree = "<group>"; };
+		37F2264F1D554E240072FC84 /* Door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Door.png; path = images/Door.png; sourceTree = "<group>"; };
+		37F226501D554E240072FC84 /* Foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Foot.png; path = images/Foot.png; sourceTree = "<group>"; };
+		37F226511D554E240072FC84 /* LargeBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LargeBody.png; path = images/LargeBody.png; sourceTree = "<group>"; };
+		37F226591D554E930072FC84 /* CrateAnimationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrateAnimationsView.swift; sourceTree = "<group>"; };
+		37F226621D5550290072FC84 /* Opencrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Opencrate.png; sourceTree = "<group>"; };
 		5199F79C68F9841E2C337F33 /* Pods-Rex Tackular AdventuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rex Tackular AdventuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rex Tackular AdventuresTests/Pods-Rex Tackular AdventuresTests.release.xcconfig"; sourceTree = "<group>"; };
 		70A737C7124649EA0DB7665E /* Pods_Rex_Tackular_AdventuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rex_Tackular_AdventuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A126F2762880DB5ED05A2D50 /* Pods_Rex_Tackular_Adventures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rex_Tackular_Adventures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,10 +108,15 @@
 			isa = PBXGroup;
 			children = (
 				3738AE7F1D3D888600BBC67D /* AppDelegate.swift */,
+				370055FE1D541B8700F875B8 /* StandingAnimalViewController.swift */,
 				3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */,
-				37F4128E1D4BEEDF00E6B937 /* AnimalGameViewController.swift */,
+				372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */,
+				37F2263C1D542D3E0072FC84 /* BirdAnimationView.swift */,
+				37F226591D554E930072FC84 /* CrateAnimationsView.swift */,
+				370056001D541C7800F875B8 /* Public.swift */,
+				37473F611D4E70AA00741F7B /* images */,
+				37F2265D1D554ED10072FC84 /* actualImages */,
 				3738AEA11D3D8D5800BBC67D /* animals.swift */,
-				37F412CC1D4BFDC000E6B937 /* AnimalGameScene.swift */,
 				3738AE861D3D888600BBC67D /* Assets.xcassets */,
 				3738AE881D3D888600BBC67D /* LaunchScreen.storyboard */,
 				3738AE8B1D3D888600BBC67D /* Info.plist */,
@@ -112,6 +131,24 @@
 				3738AE961D3D888600BBC67D /* Info.plist */,
 			);
 			path = "Rex Tackular AdventuresTests";
+			sourceTree = "<group>";
+		};
+		37473F611D4E70AA00741F7B /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		37F2265D1D554ED10072FC84 /* actualImages */ = {
+			isa = PBXGroup;
+			children = (
+				37F2264F1D554E240072FC84 /* Door.png */,
+				37F226501D554E240072FC84 /* Foot.png */,
+				37F226621D5550290072FC84 /* Opencrate.png */,
+				37F226511D554E240072FC84 /* LargeBody.png */,
+			);
+			name = actualImages;
 			sourceTree = "<group>";
 		};
 		D6BA630E4BA697B8B444A6F2 /* Frameworks */ = {
@@ -221,8 +258,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F226561D554E240072FC84 /* LargeBody.png in Resources */,
+				37F226541D554E240072FC84 /* Door.png in Resources */,
+				37F226551D554E240072FC84 /* Foot.png in Resources */,
 				3738AE8A1D3D888600BBC67D /* LaunchScreen.storyboard in Resources */,
 				3738AE871D3D888600BBC67D /* Assets.xcassets in Resources */,
+				37F226631D5550290072FC84 /* Opencrate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,10 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37F4128F1D4BEEDF00E6B937 /* AnimalGameViewController.swift in Sources */,
 				3738AEA21D3D8D5800BBC67D /* animals.swift in Sources */,
+				370055FF1D541B8700F875B8 /* StandingAnimalViewController.swift in Sources */,
 				3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */,
-				37F412CD1D4BFDC000E6B937 /* AnimalGameScene.swift in Sources */,
+				372C63361D4E7AC300EB32A8 /* AnimalGameViewController.swift in Sources */,
+				370056011D541C7800F875B8 /* Public.swift in Sources */,
+				37F2265B1D554E930072FC84 /* CrateAnimationsView.swift in Sources */,
+				37F2263D1D542D3E0072FC84 /* BirdAnimationView.swift in Sources */,
 				3738AE801D3D888600BBC67D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class InitalCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     private var collectionView: UICollectionView?
-    private let games: [Games] = [.animals]
+    private let games: [Games] = [.animals, .standing]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,8 +61,9 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
         let game = games[indexPath.row]
         let button = FabButton()
-        button.backgroundColor = MaterialColor.pink.accent1
-        button.setImage(UIImage(named: "Pig"), forState: .Normal)
+        button.userInteractionEnabled = false
+        button.backgroundColor = MaterialColor.clear
+        button.setImage(getRandomAnimalImage(), forState: .Normal)
         cell.addSubview(button)
         cell.layout(button).center(offsetY: -10)
         
@@ -79,6 +80,8 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         switch game {
         case .animals:
             self.navigationController?.pushViewController(AnimalGameViewController(), animated: true)
+        case .standing:
+            self.navigationController?.pushViewController(StandingAnimalViewController(), animated: true)
         default:
             return
         }

@@ -11,17 +11,18 @@ import SpriteKit
 class GameScene: SKScene {
     private let animals: [Animal] = [.Dog, .Cat, .Tiger, .Lion, .Hippo, .Bear, .Panda, .Mouse, .Ape, .Crockadile, .Fox, .Moose, .Pig, .Sheep, .Bird, .Rino, .Garaff, .Elephant]
     let Crate = SKSpriteNode(imageNamed: "Crate")
+    let CrateAni = CrateAnimationsView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
     var animalSprite = SKSpriteNode()
     
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
+        
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
         myLabel.text = "What Animal is this!"
         myLabel.fontSize = 45
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMaxY(self.frame) - 50)
         self.addChild(myLabel)
-        
+        self.addChild(CrateAni)
         Crate.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         Crate.zPosition = 0
         self.addChild(Crate)

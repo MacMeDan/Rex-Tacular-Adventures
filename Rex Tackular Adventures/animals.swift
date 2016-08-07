@@ -16,7 +16,7 @@ public enum Animal: String {
     case Panda      = "Panda"
     case Mouse      = "Mouse"
     case Ape        = "Ape"
-    case Crockodile = "Crockodile"
+    case Crockadile = "Crockadile"
     case Fox        = "Fox"
     case Moose      = "Moose"
     case Pig        = "Pig"
@@ -31,4 +31,5 @@ public enum Games: String {
     case numbers    = "Numbers"
     case shapes     = "Shapes"
     case animals    = "Animals"
+    case standing   = "Standing"
 }
