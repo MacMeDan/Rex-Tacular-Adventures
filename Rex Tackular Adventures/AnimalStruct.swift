@@ -5,8 +5,9 @@
 //  Created by P D Leonard on 7/18/16.
 //  Copyright © 2016 MacMeDan. All rights reserved.
 //
+import UIKit
 
-public enum Animal: String {
+public enum Name: String {
     case Dog        = "Dog"
     case Cat        = "Cat"
     case Tiger      = "Tiger"
@@ -32,4 +33,18 @@ public enum Games: String {
     case shapes     = "Shapes"
     case animals    = "Animals"
     case standing   = "Standing"
+}
+
+enum Type {
+    case feline
+    case reptile
+    case none
+}
+
+public struct Animal {
+    let hasArms: Bool
+    let type: Type
+    let frontFacing: Bool
+    let color: UIColor
+    let name : Name
 }

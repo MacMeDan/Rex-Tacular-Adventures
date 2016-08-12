@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let view = UINavigationController.init(rootViewController: InitalCollectionViewController())
         window?.rootViewController = view
         window?.makeKeyAndVisible()
+        setupAnimals()
         return true
     }
 

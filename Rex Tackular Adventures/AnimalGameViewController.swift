@@ -24,6 +24,7 @@ class AnimalGameViewController: UIViewController {
     func prepareView() {
         let titleLabel = UILabel()
         titleLabel.font = UIFont(name: "Chalkduster", size: 45)
+        titleLabel.textColor = MaterialColor.white
         titleLabel.text = "What Animal is this!"
         view.layout(titleLabel).centerHorizontally().top(20)
         view.addSubview(titleLabel)
@@ -40,7 +41,7 @@ class AnimalGameViewController: UIViewController {
     func crateTapped() {
         crateClosed ? crate.addOpenAnimation() : crate.addCloseAnimation({ Bool in
                 if Bool {
-                    self.crate.reset()
+                    self.crate.dancingAnimal.reset()
                 }
             })
         crateClosed = !crateClosed

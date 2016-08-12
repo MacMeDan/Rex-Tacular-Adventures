@@ -15,11 +15,10 @@
 		3738AE8A1D3D888600BBC67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3738AE881D3D888600BBC67D /* LaunchScreen.storyboard */; };
 		3738AE951D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE941D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift */; };
 		3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */; };
-		3738AEA21D3D8D5800BBC67D /* animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AEA11D3D8D5800BBC67D /* animals.swift */; };
-		37F2263D1D542D3E0072FC84 /* BirdAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2263C1D542D3E0072FC84 /* BirdAnimationView.swift */; };
+		3738AEA21D3D8D5800BBC67D /* AnimalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AEA11D3D8D5800BBC67D /* AnimalStruct.swift */; };
+		379574CF1D5E7141007BC758 /* DancingAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379574CE1D5E7141007BC758 /* DancingAnimalView.swift */; };
 		37F226541D554E240072FC84 /* Door.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F2264F1D554E240072FC84 /* Door.png */; };
 		37F226551D554E240072FC84 /* Foot.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226501D554E240072FC84 /* Foot.png */; };
-		37F226561D554E240072FC84 /* LargeBody.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226511D554E240072FC84 /* LargeBody.png */; };
 		37F2265B1D554E930072FC84 /* CrateAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F226591D554E930072FC84 /* CrateAnimationsView.swift */; };
 		37F226631D5550290072FC84 /* Opencrate.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226621D5550290072FC84 /* Opencrate.png */; };
 		913048DDBC9F7BCDF5CBC70B /* Pods_Rex_Tackular_AdventuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A737C7124649EA0DB7665E /* Pods_Rex_Tackular_AdventuresTests.framework */; };
@@ -50,11 +49,10 @@
 		3738AE941D3D888600BBC67D /* Rex_Tackular_AdventuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rex_Tackular_AdventuresTests.swift; sourceTree = "<group>"; };
 		3738AE961D3D888600BBC67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitalCollectionViewController.swift; sourceTree = "<group>"; };
-		3738AEA11D3D8D5800BBC67D /* animals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = animals.swift; sourceTree = "<group>"; };
-		37F2263C1D542D3E0072FC84 /* BirdAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdAnimationView.swift; sourceTree = "<group>"; };
+		3738AEA11D3D8D5800BBC67D /* AnimalStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalStruct.swift; sourceTree = "<group>"; };
+		379574CE1D5E7141007BC758 /* DancingAnimalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DancingAnimalView.swift; sourceTree = "<group>"; };
 		37F2264F1D554E240072FC84 /* Door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Door.png; path = images/Door.png; sourceTree = "<group>"; };
 		37F226501D554E240072FC84 /* Foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Foot.png; path = images/Foot.png; sourceTree = "<group>"; };
-		37F226511D554E240072FC84 /* LargeBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LargeBody.png; path = images/LargeBody.png; sourceTree = "<group>"; };
 		37F226591D554E930072FC84 /* CrateAnimationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrateAnimationsView.swift; sourceTree = "<group>"; };
 		37F226621D5550290072FC84 /* Opencrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Opencrate.png; sourceTree = "<group>"; };
 		5199F79C68F9841E2C337F33 /* Pods-Rex Tackular AdventuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rex Tackular AdventuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rex Tackular AdventuresTests/Pods-Rex Tackular AdventuresTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,12 +109,11 @@
 				370055FE1D541B8700F875B8 /* StandingAnimalViewController.swift */,
 				3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */,
 				372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */,
-				37F2263C1D542D3E0072FC84 /* BirdAnimationView.swift */,
+				379574CE1D5E7141007BC758 /* DancingAnimalView.swift */,
 				37F226591D554E930072FC84 /* CrateAnimationsView.swift */,
 				370056001D541C7800F875B8 /* Public.swift */,
-				37473F611D4E70AA00741F7B /* images */,
+				3738AEA11D3D8D5800BBC67D /* AnimalStruct.swift */,
 				37F2265D1D554ED10072FC84 /* actualImages */,
-				3738AEA11D3D8D5800BBC67D /* animals.swift */,
 				3738AE861D3D888600BBC67D /* Assets.xcassets */,
 				3738AE881D3D888600BBC67D /* LaunchScreen.storyboard */,
 				3738AE8B1D3D888600BBC67D /* Info.plist */,
@@ -133,20 +130,12 @@
 			path = "Rex Tackular AdventuresTests";
 			sourceTree = "<group>";
 		};
-		37473F611D4E70AA00741F7B /* images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
 		37F2265D1D554ED10072FC84 /* actualImages */ = {
 			isa = PBXGroup;
 			children = (
 				37F2264F1D554E240072FC84 /* Door.png */,
 				37F226501D554E240072FC84 /* Foot.png */,
 				37F226621D5550290072FC84 /* Opencrate.png */,
-				37F226511D554E240072FC84 /* LargeBody.png */,
 			);
 			name = actualImages;
 			sourceTree = "<group>";
@@ -258,7 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37F226561D554E240072FC84 /* LargeBody.png in Resources */,
 				37F226541D554E240072FC84 /* Door.png in Resources */,
 				37F226551D554E240072FC84 /* Foot.png in Resources */,
 				3738AE8A1D3D888600BBC67D /* LaunchScreen.storyboard in Resources */,
@@ -374,13 +362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3738AEA21D3D8D5800BBC67D /* animals.swift in Sources */,
+				3738AEA21D3D8D5800BBC67D /* AnimalStruct.swift in Sources */,
 				370055FF1D541B8700F875B8 /* StandingAnimalViewController.swift in Sources */,
 				3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */,
 				372C63361D4E7AC300EB32A8 /* AnimalGameViewController.swift in Sources */,
 				370056011D541C7800F875B8 /* Public.swift in Sources */,
+				379574CF1D5E7141007BC758 /* DancingAnimalView.swift in Sources */,
 				37F2265B1D554E930072FC84 /* CrateAnimationsView.swift in Sources */,
-				37F2263D1D542D3E0072FC84 /* BirdAnimationView.swift in Sources */,
 				3738AE801D3D888600BBC67D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
