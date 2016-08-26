@@ -11,18 +11,19 @@ class DancingAnimalView : UIView {
     var animal: Animal!
     let footR = UIImageView()
     let footL = UIImageView()
-    let largeBody = UIImageView()
+    let body = UIImageView()
     let head = UIImageView()
     var viewsByName: [String : UIView] = [:]
     
     convenience init() {
         self.init(frame: CGRect(x: 0, y: 0, width: 1136, height: 768))
+        setupDancingAnimal()
     }
-
+    
     func reset() {
         getNewAnimal()
-        largeBody.image = getBodyImageFor(animal)
-        largeBody.tintColor = animal.color
+        body.image = getBodyImageFor(animal)
+        body.tintColor = animal.color
         footR.image = getFootImageFor(animal)
         footL.image = getFootImageFor(animal)
         head.image = getHeadImageFor(animal)
@@ -31,6 +32,7 @@ class DancingAnimalView : UIView {
 
     func getNewAnimal() {
         animal = getRandomAnimal()
+        print(animal.name)
     }
 
     //Image Helpers
@@ -73,48 +75,54 @@ class DancingAnimalView : UIView {
     }
 
     func setupDancingAnimal() {
-        
-        getNewAnimal()
-        footL.bounds = CGRect(x:0, y:0, width:464.0, height:406.0)
-        let image = getFootImageFor(animal)
-        footL.image = image
-        footL.contentMode = .Center
-        footL.layer.position = CGPoint(x:205.966, y:277.241)
-        footL.transform = CGAffineTransformMakeScale(0.13, 0.13)
-        self.addSubview(footL)
-        viewsByName["FootL"] = footL
+        let yOffset: CGFloat = 300
+        let xOffset: CGFloat = 200
 
+        getNewAnimal()
 
         footR.bounds = CGRect(x:0, y:0, width:464.0, height:406.0)
-        footR.image = getFootImageFor(animal)
+        footL.bounds = CGRect(x:0, y:0, width:464.0, height:406.0)
+        body.bounds  = CGRect(x:0, y:0, width:1178.0, height:978.0)
+        head.bounds  = CGRect(x:0, y:0, width:80.0, height:80.0)
+
+        footL.contentMode = .Center
         footR.contentMode = .Center
-        footR.tag = 1
-        footR.layer.position = CGPoint(x:282.175, y:278.153)
+        body.contentMode  = .Center
+        head.contentMode  = .Center
+
+        body.layer.anchorPoint = CGPoint(x:0.497, y:0.481)
+
+        //Position
+        footR.layer.position = CGPoint(x: xOffset + 82.175, y: yOffset + 188.153)
+        footL.layer.position = CGPoint(x: xOffset + 5.966, y: yOffset + 187.241)
+        body.layer.position  = CGPoint(x: xOffset + 49.257, y: yOffset + 85.372)
+        head.layer.position  = CGPoint(x: xOffset + 51.000, y: yOffset - 1.9)
+
+        //Image
+        footL.image = getFootImageFor(animal)
+        footR.image = getFootImageFor(animal)
+        body.image  = getBodyImageFor(animal)
+        head.image  = getHeadImageFor(animal)
+
+        // Scale
+        body.transform  = CGAffineTransformMakeScale(1.8, 1.8)
         footR.transform = CGAffineTransformScale(CGAffineTransformMakeRotation(3.14), -0.14, -0.14)
+        footL.transform = CGAffineTransformMakeScale(0.13, 0.13)
+        head.transform  = CGAffineTransformMakeScale(2.78, 2.78)
+
+        // adding to the view
+
+        self.addSubview(body)
+        self.addSubview(footL)
         self.addSubview(footR)
-        viewsByName["FootR"] = footR
-
-
-        largeBody.bounds = CGRect(x:0, y:0, width:1178.0, height:978.0)
-        largeBody.layer.anchorPoint = CGPoint(x:0.497, y:0.481)
-
-        largeBody.image = getBodyImageFor(animal)
-        largeBody.contentMode = .Center
-        largeBody.layer.position = CGPoint(x:249.257, y:185.372)
-        largeBody.transform = CGAffineTransformMakeScale(1.5, 1.5)
-        self.addSubview(largeBody)
-        viewsByName["LargeBody"] = largeBody
-
-
-        head.bounds = CGRect(x:0, y:0, width:80.0, height:80.0)
-        head.image = getHeadImageFor(animal)
-        head.contentMode = .Center
-        head.layer.position = CGPoint(x:251.000, y:99.182)
-        head.transform = CGAffineTransformMakeScale(2.78, 2.78)
         self.addSubview(head)
-        viewsByName["Lion"] = head
 
+        viewsByName["FootL"] = footL
+        viewsByName["FootR"] = footR
+        viewsByName["body"] = body
+        viewsByName["Head"] = head
     }
+
     // - MARK: Standing
 
     func addStandingAnimation() {
@@ -140,81 +148,81 @@ class DancingAnimalView : UIView {
         footRTranslationYAnimation.removedOnCompletion = removedOnCompletion
         self.viewsByName["FootR"]?.layer.addAnimation(footRTranslationYAnimation, forKey:"Standing_TranslationY")
 
-        let largeBodyRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-        largeBodyRotationAnimation.duration = 0.950
-        largeBodyRotationAnimation.values = [0.000 as Float, 0.000 as Float, -0.035 as Float, -0.002 as Float]
-        largeBodyRotationAnimation.keyTimes = [0.000 as Float, 0.174 as Float, 0.526 as Float, 1.000 as Float]
-        largeBodyRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
-        largeBodyRotationAnimation.repeatCount = HUGE
-        largeBodyRotationAnimation.beginTime = beginTime
-        largeBodyRotationAnimation.fillMode = fillMode
-        largeBodyRotationAnimation.removedOnCompletion = removedOnCompletion
-        self.viewsByName["LargeBody"]?.layer.addAnimation(largeBodyRotationAnimation, forKey:"Standing_Rotation")
+        let bodyRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        bodyRotationAnimation.duration = 0.950
+        bodyRotationAnimation.values = [0.000 as Float, 0.000 as Float, -0.035 as Float, -0.002 as Float]
+        bodyRotationAnimation.keyTimes = [0.000 as Float, 0.174 as Float, 0.526 as Float, 1.000 as Float]
+        bodyRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
+        bodyRotationAnimation.repeatCount = HUGE
+        bodyRotationAnimation.beginTime = beginTime
+        bodyRotationAnimation.fillMode = fillMode
+        bodyRotationAnimation.removedOnCompletion = removedOnCompletion
+        self.viewsByName["body"]?.layer.addAnimation(bodyRotationAnimation, forKey:"Standing_Rotation")
 
-        let largeBodyTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        largeBodyTranslationXAnimation.duration = 0.500
-        largeBodyTranslationXAnimation.values = [0.000 as Float, 0.198 as Float, -1.000 as Float]
-        largeBodyTranslationXAnimation.keyTimes = [0.000 as Float, 0.802 as Float, 1.000 as Float]
-        largeBodyTranslationXAnimation.timingFunctions = [linearTiming, linearTiming]
-        largeBodyTranslationXAnimation.repeatCount = HUGE
-        largeBodyTranslationXAnimation.beginTime = beginTime
-        largeBodyTranslationXAnimation.fillMode = fillMode
-        largeBodyTranslationXAnimation.removedOnCompletion = removedOnCompletion
-        self.viewsByName["LargeBody"]?.layer.addAnimation(largeBodyTranslationXAnimation, forKey:"Standing_TranslationX")
+        let bodyTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        bodyTranslationXAnimation.duration = 0.500
+        bodyTranslationXAnimation.values = [0.000 as Float, 0.198 as Float, -1.000 as Float]
+        bodyTranslationXAnimation.keyTimes = [0.000 as Float, 0.802 as Float, 1.000 as Float]
+        bodyTranslationXAnimation.timingFunctions = [linearTiming, linearTiming]
+        bodyTranslationXAnimation.repeatCount = HUGE
+        bodyTranslationXAnimation.beginTime = beginTime
+        bodyTranslationXAnimation.fillMode = fillMode
+        bodyTranslationXAnimation.removedOnCompletion = removedOnCompletion
+        self.viewsByName["body"]?.layer.addAnimation(bodyTranslationXAnimation, forKey:"Standing_TranslationX")
 
-        let largeBodyTranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
-        largeBodyTranslationYAnimation.duration = 1.000
-        largeBodyTranslationYAnimation.values = [0.000 as Float, -3.010 as Float, -5.000 as Float, 0.000 as Float]
-        largeBodyTranslationYAnimation.keyTimes = [0.000 as Float, 0.290 as Float, 0.500 as Float, 1.000 as Float]
-        largeBodyTranslationYAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
-        largeBodyTranslationYAnimation.repeatCount = HUGE
-        largeBodyTranslationYAnimation.beginTime = beginTime
-        largeBodyTranslationYAnimation.fillMode = fillMode
-        largeBodyTranslationYAnimation.removedOnCompletion = removedOnCompletion
-        self.viewsByName["LargeBody"]?.layer.addAnimation(largeBodyTranslationYAnimation, forKey:"Standing_TranslationY")
+        let bodyTranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+        bodyTranslationYAnimation.duration = 1.000
+        bodyTranslationYAnimation.values = [0.000 as Float, -3.010 as Float, -5.000 as Float, 0.000 as Float]
+        bodyTranslationYAnimation.keyTimes = [0.000 as Float, 0.290 as Float, 0.500 as Float, 1.000 as Float]
+        bodyTranslationYAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
+        bodyTranslationYAnimation.repeatCount = HUGE
+        bodyTranslationYAnimation.beginTime = beginTime
+        bodyTranslationYAnimation.fillMode = fillMode
+        bodyTranslationYAnimation.removedOnCompletion = removedOnCompletion
+        self.viewsByName["body"]?.layer.addAnimation(bodyTranslationYAnimation, forKey:"Standing_TranslationY")
 
-        let lionRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-        lionRotationAnimation.duration = 0.700
-        lionRotationAnimation.values = [0.000 as Float, 0.004 as Float, -0.020 as Float, 0.004 as Float]
-        lionRotationAnimation.keyTimes = [0.000 as Float, 0.537 as Float, 0.757 as Float, 1.000 as Float]
-        lionRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
-        lionRotationAnimation.repeatCount = HUGE
-        lionRotationAnimation.beginTime = beginTime
-        lionRotationAnimation.fillMode = fillMode
-        lionRotationAnimation.removedOnCompletion = removedOnCompletion
-        self.viewsByName["Lion"]?.layer.addAnimation(lionRotationAnimation, forKey:"Standing_Rotation")
+        let HeadRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        HeadRotationAnimation.duration = 0.700
+        HeadRotationAnimation.values = [0.000 as Float, 0.004 as Float, -0.020 as Float, 0.004 as Float]
+        HeadRotationAnimation.keyTimes = [0.000 as Float, 0.537 as Float, 0.757 as Float, 1.000 as Float]
+        HeadRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
+        HeadRotationAnimation.repeatCount = HUGE
+        HeadRotationAnimation.beginTime = beginTime
+        HeadRotationAnimation.fillMode = fillMode
+        HeadRotationAnimation.removedOnCompletion = removedOnCompletion
+        self.viewsByName["Head"]?.layer.addAnimation(HeadRotationAnimation, forKey:"Standing_Rotation")
 
-        let lionTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        lionTranslationXAnimation.duration = 0.680
-        lionTranslationXAnimation.values = [0.000 as Float, 0.000 as Float, -1.000 as Float, 0.000 as Float]
-        lionTranslationXAnimation.keyTimes = [0.000 as Float, 0.590 as Float, 0.779 as Float, 1.000 as Float]
-        lionTranslationXAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
-        lionTranslationXAnimation.repeatCount = HUGE
-        lionTranslationXAnimation.beginTime = beginTime
-        lionTranslationXAnimation.fillMode = fillMode
-        lionTranslationXAnimation.removedOnCompletion = removedOnCompletion
-        self.viewsByName["Lion"]?.layer.addAnimation(lionTranslationXAnimation, forKey:"Standing_TranslationX")
+        let HeadTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        HeadTranslationXAnimation.duration = 0.680
+        HeadTranslationXAnimation.values = [0.000 as Float, 0.000 as Float, -1.000 as Float, 0.000 as Float]
+        HeadTranslationXAnimation.keyTimes = [0.000 as Float, 0.590 as Float, 0.779 as Float, 1.000 as Float]
+        HeadTranslationXAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
+        HeadTranslationXAnimation.repeatCount = HUGE
+        HeadTranslationXAnimation.beginTime = beginTime
+        HeadTranslationXAnimation.fillMode = fillMode
+        HeadTranslationXAnimation.removedOnCompletion = removedOnCompletion
+        self.viewsByName["Head"]?.layer.addAnimation(HeadTranslationXAnimation, forKey:"Standing_TranslationX")
 
-        let lionTranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
-        lionTranslationYAnimation.duration = 0.680
-        lionTranslationYAnimation.values = [0.000 as Float, 0.000 as Float, -2.000 as Float, 0.000 as Float]
-        lionTranslationYAnimation.keyTimes = [0.000 as Float, 0.590 as Float, 0.779 as Float, 1.000 as Float]
-        lionTranslationYAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
-        lionTranslationYAnimation.repeatCount = HUGE
-        lionTranslationYAnimation.beginTime = beginTime
-        lionTranslationYAnimation.fillMode = fillMode
-        lionTranslationYAnimation.removedOnCompletion = removedOnCompletion
-        self.viewsByName["Lion"]?.layer.addAnimation(lionTranslationYAnimation, forKey:"Standing_TranslationY")
+        let HeadTranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+        HeadTranslationYAnimation.duration = 0.680
+        HeadTranslationYAnimation.values = [0.000 as Float, 0.000 as Float, -2.000 as Float, 0.000 as Float]
+        HeadTranslationYAnimation.keyTimes = [0.000 as Float, 0.590 as Float, 0.779 as Float, 1.000 as Float]
+        HeadTranslationYAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
+        HeadTranslationYAnimation.repeatCount = HUGE
+        HeadTranslationYAnimation.beginTime = beginTime
+        HeadTranslationYAnimation.fillMode = fillMode
+        HeadTranslationYAnimation.removedOnCompletion = removedOnCompletion
+        self.viewsByName["Head"]?.layer.addAnimation(HeadTranslationYAnimation, forKey:"Standing_TranslationY")
     }
 
     func removeStandingAnimation() {
         self.viewsByName["FootR"]?.layer.removeAnimationForKey("Standing_TranslationY")
-        self.viewsByName["LargeBody"]?.layer.removeAnimationForKey("Standing_Rotation")
-        self.viewsByName["LargeBody"]?.layer.removeAnimationForKey("Standing_TranslationX")
-        self.viewsByName["LargeBody"]?.layer.removeAnimationForKey("Standing_TranslationY")
-        self.viewsByName["Lion"]?.layer.removeAnimationForKey("Standing_Rotation")
-        self.viewsByName["Lion"]?.layer.removeAnimationForKey("Standing_TranslationX")
-        self.viewsByName["Lion"]?.layer.removeAnimationForKey("Standing_TranslationY")
+        self.viewsByName["body"]?.layer.removeAnimationForKey("Standing_Rotation")
+        self.viewsByName["body"]?.layer.removeAnimationForKey("Standing_TranslationX")
+        self.viewsByName["body"]?.layer.removeAnimationForKey("Standing_TranslationY")
+        self.viewsByName["Head"]?.layer.removeAnimationForKey("Standing_Rotation")
+        self.viewsByName["Head"]?.layer.removeAnimationForKey("Standing_TranslationX")
+        self.viewsByName["Head"]?.layer.removeAnimationForKey("Standing_TranslationY")
         self.animal = getRandomAnimal()
     }
 

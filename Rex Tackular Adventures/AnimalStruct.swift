@@ -17,7 +17,7 @@ public enum Name: String {
     case Panda      = "Panda"
     case Mouse      = "Mouse"
     case Ape        = "Ape"
-    case Crockadile = "Crockadile"
+    case Crock      = "Crockadile"
     case Fox        = "Fox"
     case Moose      = "Moose"
     case Pig        = "Pig"
@@ -33,6 +33,7 @@ public enum Games: String {
     case shapes     = "Shapes"
     case animals    = "Animals"
     case standing   = "Standing"
+    case Testing    = "Testing"
 }
 
 enum Type {
@@ -41,10 +42,26 @@ enum Type {
     case none
 }
 
+func getType(name: Name) -> Type {
+    switch name {
+    case .Cat, .Lion, .Tiger, .Dog:
+        return .feline
+    default:
+        return .none
+    }
+}
+
 public struct Animal {
-    let hasArms: Bool
     let type: Type
-    let frontFacing: Bool
     let color: UIColor
     let name : Name
+    let size : CGFloat
+    init(hasArms: Bool = false, name: Name, size: CGFloat) {
+        self.type = getType(name)
+        self.size = size
+        self.name = name
+        self.color = getColor(name)
+    }
 }
+
+

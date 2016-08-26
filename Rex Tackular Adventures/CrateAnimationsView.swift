@@ -62,8 +62,8 @@ class CrateAnimationsView : UIView {
 	func setupHierarchy() {
         getRandomAnimal()
         fullCrate = UIView()
+        let bundle = NSBundle(forClass:self.dynamicType)
 		var viewsByName: [String : UIView] = [:]
-		let bundle = NSBundle(forClass:self.dynamicType)
 		let __scaling__ = UIView()
 		__scaling__.bounds = CGRect(x:0, y:0, width:1136, height:768)
 		__scaling__.center = CGPoint(x:568.0, y:384.0)
@@ -88,25 +88,29 @@ class CrateAnimationsView : UIView {
 		fullCrate.addSubview(opencrate)
 		viewsByName["Opencrate"] = opencrate
 
-        let animalViews = dancingAnimal.setupDancingAnimal()
         fullCrate.addSubview(dancingAnimal)
-        let door = UIImageView()
-		door.bounds = CGRect(x:0, y:0, width:511.0, height:497.0)
-		door.layer.anchorPoint = CGPoint(x:-0.003, y:0.500)
-		var imgDoor: UIImage!
-		if let imagePath = bundle.pathForResource("Door.png", ofType:nil) {
-			imgDoor = UIImage(contentsOfFile:imagePath)
-		}else {
-			print("** Warning: Could not create image from 'Door.png'. Please make sure that it is added to the project directly (not in a folder reference).")
-		}
-		door.image = imgDoor
-		door.contentMode = .Center
-		door.layer.position = CGPoint(x:-1.711, y:271.598)
-		fullCrate.addSubview(door)
-		viewsByName["Door"] = door
+
+		viewsByName["Door"] = getDoor()
 
 		self.viewsByName = viewsByName
 	}
+    func getDoor() -> UIImageView {
+        let door = UIImageView()
+        door.bounds = CGRect(x:0, y:0, width:511.0, height:497.0)
+        door.layer.anchorPoint = CGPoint(x:-0.003, y:0.500)
+        var imgDoor: UIImage!
+        let bundle = NSBundle(forClass:self.dynamicType)
+        if let imagePath = bundle.pathForResource("Door.png", ofType:nil) {
+            imgDoor = UIImage(contentsOfFile:imagePath)
+        }else {
+            print("** Warning: Could not create image from 'Door.png'. Please make sure that it is added to the project directly (not in a folder reference).")
+        }
+        door.image = imgDoor
+        door.contentMode = .Center
+        door.layer.position = CGPoint(x:-1.711, y:271.598)
+        fullCrate.addSubview(door)
+        return door
+    }
 
 	// - MARK: Close
 

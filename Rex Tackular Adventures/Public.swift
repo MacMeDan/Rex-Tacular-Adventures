@@ -11,49 +11,53 @@ import Material
 
 public var animalImage: UIImage!
 
-public let Names: [Name] = [.Dog, .Cat, .Tiger, .Lion, .Hippo, .Bear, .Panda, .Mouse, .Ape, .Crockadile, .Fox, .Moose, .Pig, .Sheep, .Bird, .Rino, .Elephant]
+public let Names: [Name] = [.Dog, .Cat, .Tiger, .Lion, .Hippo, .Bear, .Panda, .Mouse, .Ape, .Crock, .Fox, .Pig, .Sheep, .Bird, .Rino, .Elephant]
 
 public var Animals: [Animal] = []
 
 public func setupAnimals() {
-    for item in Names {
-        Animals.append(Animal(hasArms: false, type: getType(item), frontFacing: true, color: getColor(item), name: item))
-    }
+    Animals.append(Animal(name: Name.Dog,     size: 1.0))
+    Animals.append(Animal(name: Name.Ape,     size: 2.0))
+    Animals.append(Animal(name: Name.Cat,     size: 1.0))
+    Animals.append(Animal(name: Name.Tiger,   size: 1.5))
+    Animals.append(Animal(name: Name.Hippo,   size: 2.6))
+    Animals.append(Animal(name: Name.Bear,    size: 2.4))
+    Animals.append(Animal(name: Name.Panda,   size: 2.4))
+    Animals.append(Animal(name: Name.Mouse,   size: 0.5))
+    Animals.append(Animal(name: Name.Crock,   size: 1.6))
+    Animals.append(Animal(name: Name.Fox,     size: 1.2))
+    Animals.append(Animal(name: Name.Pig,     size: 1.3))
+    Animals.append(Animal(name: Name.Sheep,   size: 1.3))
+    Animals.append(Animal(name: Name.Bird,    size: 0.6))
+    Animals.append(Animal(name: Name.Rino,    size: 2.3))
+    Animals.append(Animal(name: Name.Elephant,size: 2.6))
 }
 
-func getType(name: Name) -> Type {
-    switch name {
-    case .Cat, .Lion, .Tiger, .Dog:
-        return .feline
-    default:
-        return .none
-    }
-}
 
 func getColor(name: Name) -> UIColor {
     switch  name {
     case .Ape:
-        return MaterialColor.grey.lighten2
-    case .Bear, .Moose:
+        return MaterialColor.grey.base
+    case .Bear:
         return MaterialColor.brown.base
     case .Bird:
-        return MaterialColor.blue.accent3
-    case .Cat, .Lion, .Tiger:
+        return MaterialColor.blue.lighten2
+    case  .Lion, .Tiger:
         return MaterialColor.orange.lighten4
-    case .Crockadile:
+    case .Crock:
         return MaterialColor.green.base
     case .Dog:
         return MaterialColor.grey.base
     case .Elephant, .Hippo, .Rino, .Mouse:
-        return MaterialColor.grey.darken3
+        return MaterialColor.grey.darken1
     case .Fox:
-        return MaterialColor.red.accent3
-    case .Panda, .Sheep:
-        return MaterialColor.white
+        return MaterialColor.red.accent1
+    case .Panda, .Sheep, .Cat:
+        return MaterialColor.grey.lighten4
     case .Pig:
-        return MaterialColor.pink.accent3
+        return MaterialColor.pink.accent1
     default:
-        return MaterialColor.blue.base
+        return MaterialColor.purple.base
     }
 
 }
@@ -66,6 +70,6 @@ public func getRandomAnimalImage() -> UIImage {
 }
 
 public func getRandomAnimal() -> Animal {
-    let randomIndex = Int(arc4random_uniform(UInt32(Names.count)))
+    let randomIndex = Int(arc4random_uniform(UInt32(Names.count - 1)))
     return Animals[randomIndex]
 }
