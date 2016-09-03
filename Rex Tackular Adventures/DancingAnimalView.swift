@@ -35,6 +35,11 @@ class DancingAnimalView : UIView {
         print(animal.name)
     }
 
+    func getThisAnimalDancing(dissOne: Animal) {
+        animal = dissOne
+        print(animal.name)
+    }
+
     //Image Helpers
 
     func getFootImageFor(animal: Animal) -> UIImage {

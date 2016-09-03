@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370055FF1D541B8700F875B8 /* StandingAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370055FE1D541B8700F875B8 /* StandingAnimalViewController.swift */; };
 		370056011D541C7800F875B8 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370056001D541C7800F875B8 /* Public.swift */; };
 		372C63361D4E7AC300EB32A8 /* AnimalGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */; };
 		3738AE801D3D888600BBC67D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AE7F1D3D888600BBC67D /* AppDelegate.swift */; };
@@ -38,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		2D58DEAABF7E222648F03C86 /* Pods-Rex Tackular Adventures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rex Tackular Adventures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rex Tackular Adventures/Pods-Rex Tackular Adventures.debug.xcconfig"; sourceTree = "<group>"; };
-		370055FE1D541B8700F875B8 /* StandingAnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingAnimalViewController.swift; sourceTree = "<group>"; };
 		370056001D541C7800F875B8 /* Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Public.swift; sourceTree = "<group>"; };
 		372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalGameViewController.swift; sourceTree = "<group>"; };
 		3738AE7C1D3D888600BBC67D /* Rex Tackular Adventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rex Tackular Adventures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				3738AE7F1D3D888600BBC67D /* AppDelegate.swift */,
-				370055FE1D541B8700F875B8 /* StandingAnimalViewController.swift */,
 				3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */,
 				37A02B421D70F89100C1C82F /* TestingCollectionViewController.swift */,
 				372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */,
@@ -219,6 +216,7 @@
 				TargetAttributes = {
 					3738AE7B1D3D888600BBC67D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H9KX8WA9HF;
 					};
 					3738AE8F1D3D888600BBC67D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -367,7 +365,6 @@
 			files = (
 				37A02B431D70F89100C1C82F /* TestingCollectionViewController.swift in Sources */,
 				3738AEA21D3D8D5800BBC67D /* AnimalStruct.swift in Sources */,
-				370055FF1D541B8700F875B8 /* StandingAnimalViewController.swift in Sources */,
 				3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */,
 				372C63361D4E7AC300EB32A8 /* AnimalGameViewController.swift in Sources */,
 				370056011D541C7800F875B8 /* Public.swift in Sources */,

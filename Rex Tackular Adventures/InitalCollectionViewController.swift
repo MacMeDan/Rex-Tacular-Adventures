@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class InitalCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     private var collectionView: UICollectionView?
-    private let games: [Games] = [.animals, .standing, .Testing]
+    private let games: [Games] = [.animals, .Testing]
     
     override func viewDidLoad() {
         super.viewDidLoad()
