@@ -60,7 +60,6 @@ class CrateAnimationsView : UIView {
 
 
 	func setupHierarchy() {
-        getRandomAnimal()
         fullCrate = UIView()
         let bundle = NSBundle(forClass:self.dynamicType)
 		var viewsByName: [String : UIView] = [:]
@@ -89,6 +88,8 @@ class CrateAnimationsView : UIView {
 		viewsByName["Opencrate"] = opencrate
 
         fullCrate.addSubview(dancingAnimal)
+        //This is to get the animal at the bottom of the crate and centered. Probably wont work for differnt sized screens.
+        fullCrate.layout(dancingAnimal).top(240).left(150)
 
 		viewsByName["Door"] = getDoor()
 

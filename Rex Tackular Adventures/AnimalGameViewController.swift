@@ -21,18 +21,6 @@ class AnimalGameViewController: UIViewController {
         addBackButton()
     }
 
-    func addBackButton() {
-        let button = FabButton()
-        button.setTitle("Back", forState: .Normal)
-        button.addTarget(self, action: #selector(dismissView), forControlEvents: .TouchUpInside)
-        view.addSubview(button)
-        view.layout(button).top(20).left(20).width(50).height(50)
-    }
-
-    func dismissView() {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
-
 
     func prepareView() {
         let titleLabel = UILabel()

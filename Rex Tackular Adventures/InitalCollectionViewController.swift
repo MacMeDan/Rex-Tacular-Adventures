@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class InitalCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     private var collectionView: UICollectionView?
-    private let games: [Games] = [.animals, .Testing]
+    private let games: [Games] = [.animals, .OneThroughTen, .TenThroughTwenty, .Testing]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,10 +80,12 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         switch game {
         case .animals:
             self.navigationController?.pushViewController(AnimalGameViewController(), animated: true)
-        case .standing:
-            self.navigationController?.pushViewController(StandingAnimalViewController(), animated: true)
         case .Testing:
-            self.navigationController?.pushViewController(TestingCollectionViewController(), animated: true)
+            navigationController?.pushViewController(TestingCollectionViewController(), animated: true)
+        case .OneThroughTen:
+            navigationController?.pushViewController(NumbersView(start: 0, end: 10), animated: true)
+        case .TenThroughTwenty:
+            navigationController?.pushViewController(NumbersView(start: 10, end: 20), animated: true)
         default:
             return
         }

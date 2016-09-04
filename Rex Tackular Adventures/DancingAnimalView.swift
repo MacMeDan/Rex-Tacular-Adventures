@@ -8,7 +8,7 @@
 import UIKit
 
 class DancingAnimalView : UIView {
-    var animal: Animal!
+    var animal = getRandomAnimal()
     let footR = UIImageView()
     let footL = UIImageView()
     let body = UIImageView()
@@ -16,12 +16,12 @@ class DancingAnimalView : UIView {
     var viewsByName: [String : UIView] = [:]
     
     convenience init() {
-        self.init(frame: CGRect(x: 0, y: 0, width: 1136, height: 768))
+        self.init(frame: CGRect(x: 0, y: 0, width: 250, height: 283))
         setupDancingAnimal()
     }
     
     func reset() {
-        getNewAnimal()
+        animal = getRandomAnimal()
         body.image = getBodyImageFor(animal)
         body.tintColor = animal.color
         footR.image = getFootImageFor(animal)
@@ -30,14 +30,15 @@ class DancingAnimalView : UIView {
         addStandingAnimation()
     }
 
-    func getNewAnimal() {
-        animal = getRandomAnimal()
-        print(animal.name)
-    }
-
     func getThisAnimalDancing(dissOne: Animal) {
         animal = dissOne
-        print(animal.name)
+        body.image = getBodyImageFor(animal)
+        body.tintColor = animal.color
+        footR.image = getFootImageFor(animal)
+        footL.image = getFootImageFor(animal)
+        head.image = getHeadImageFor(animal)
+        addStandingAnimation()
+        print("Getting this animal named: ", animal.name)
     }
 
     //Image Helpers
@@ -80,10 +81,6 @@ class DancingAnimalView : UIView {
     }
 
     func setupDancingAnimal() {
-        let yOffset: CGFloat = 300
-        let xOffset: CGFloat = 200
-
-        getNewAnimal()
 
         footR.bounds = CGRect(x:0, y:0, width:464.0, height:406.0)
         footL.bounds = CGRect(x:0, y:0, width:464.0, height:406.0)
@@ -98,10 +95,10 @@ class DancingAnimalView : UIView {
         body.layer.anchorPoint = CGPoint(x:0.497, y:0.481)
 
         //Position
-        footR.layer.position = CGPoint(x: xOffset + 82.175, y: yOffset + 188.153)
-        footL.layer.position = CGPoint(x: xOffset + 5.966, y: yOffset + 187.241)
-        body.layer.position  = CGPoint(x: xOffset + 49.257, y: yOffset + 85.372)
-        head.layer.position  = CGPoint(x: xOffset + 51.000, y: yOffset - 1.9)
+        footR.layer.position = CGPoint(x:162.175, y:258.153)
+        footL.layer.position = CGPoint(x:85.966, y:257.241)
+        body.layer.position = CGPoint(x:128.561, y:165.372)
+        head.layer.position = CGPoint(x:130.000, y:79.182)
 
         //Image
         footL.image = getFootImageFor(animal)
@@ -228,7 +225,6 @@ class DancingAnimalView : UIView {
         self.viewsByName["Head"]?.layer.removeAnimationForKey("Standing_Rotation")
         self.viewsByName["Head"]?.layer.removeAnimationForKey("Standing_TranslationX")
         self.viewsByName["Head"]?.layer.removeAnimationForKey("Standing_TranslationY")
-        self.animal = getRandomAnimal()
     }
 
 }

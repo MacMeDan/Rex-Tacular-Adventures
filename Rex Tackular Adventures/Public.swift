@@ -11,9 +11,6 @@ import Material
 
 public var animalImage: UIImage!
 
-public let Names: [Name] = [.Dog, .Cat, .Tiger, .Lion, .Hippo, .Bear, .Panda, .Mouse, .Ape, .Crock, .Fox, .Pig, .Sheep, .Bird, .Rino, .Elephant]
-
-public var Animals: [Animal] = []
 
 public func setupAnimals() {
     Animals.append(Animal(name: Name.Dog,     size: 1.0))
@@ -33,43 +30,20 @@ public func setupAnimals() {
     Animals.append(Animal(name: Name.Elephant,size: 2.6))
 }
 
+//MARK: UIViewcontroller exstention
 
-func getColor(name: Name) -> UIColor {
-    switch  name {
-    case .Ape:
-        return MaterialColor.grey.base
-    case .Bear:
-        return MaterialColor.brown.base
-    case .Bird:
-        return MaterialColor.blue.lighten2
-    case  .Lion, .Tiger:
-        return MaterialColor.orange.lighten4
-    case .Crock:
-        return MaterialColor.green.base
-    case .Dog:
-        return MaterialColor.grey.base
-    case .Elephant, .Hippo, .Rino, .Mouse:
-        return MaterialColor.grey.darken1
-    case .Fox:
-        return MaterialColor.red.accent1
-    case .Panda, .Sheep, .Cat:
-        return MaterialColor.grey.lighten4
-    case .Pig:
-        return MaterialColor.pink.accent1
-    default:
-        return MaterialColor.purple.base
+extension UIViewController {
+    func addBackButton() {
+        let button = FabButton()
+        button.setTitle("Back", forState: .Normal)
+        button.backgroundColor = MaterialColor.clear
+        button.addTarget(self, action: #selector(dismissView), forControlEvents: .TouchUpInside)
+        view.addSubview(button)
+        view.layout(button).top(20).left(20).width(50).height(50)
     }
 
+    func dismissView() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }
 
-public func getRandomAnimalImage() -> UIImage {
-    
-    let randomIndex = Int(arc4random_uniform(UInt32(Names.count)))
-    animalImage = UIImage(named: Names[randomIndex].rawValue)!
-    return animalImage
-}
-
-public func getRandomAnimal() -> Animal {
-    let randomIndex = Int(arc4random_uniform(UInt32(Names.count - 1)))
-    return Animals[randomIndex]
-}

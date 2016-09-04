@@ -6,6 +6,7 @@
 //  Copyright © 2016 MacMeDan. All rights reserved.
 //
 import UIKit
+import Material
 
 public enum Name: String {
     case Dog        = "Dog"
@@ -17,7 +18,7 @@ public enum Name: String {
     case Panda      = "Panda"
     case Mouse      = "Mouse"
     case Ape        = "Ape"
-    case Crock      = "Crockadile"
+    case Crock      = "Crock"
     case Fox        = "Fox"
     case Moose      = "Moose"
     case Pig        = "Pig"
@@ -30,9 +31,10 @@ public enum Name: String {
 
 public enum Games: String {
     case numbers    = "Numbers"
+    case OneThroughTen = "Numbers 1 - 10"
+    case TenThroughTwenty = "Numbers 10 - 20"
     case shapes     = "Shapes"
     case animals    = "Animals"
-    case standing   = "Standing"
     case Testing    = "Testing"
 }
 
@@ -64,4 +66,46 @@ public struct Animal {
     }
 }
 
+public let Names: [Name] = [.Dog, .Cat, .Tiger, .Lion, .Hippo, .Bear, .Panda, .Mouse, .Ape, .Crock, .Fox, .Pig, .Sheep, .Bird, .Rino, .Elephant]
 
+
+public var Animals: [Animal] = []
+
+func getColor(name: Name) -> UIColor {
+    switch  name {
+    case .Ape:
+        return MaterialColor.grey.base
+    case .Bear:
+        return MaterialColor.brown.base
+    case .Bird:
+        return MaterialColor.blue.lighten2
+    case  .Lion, .Tiger:
+        return MaterialColor.orange.lighten4
+    case .Crock:
+        return MaterialColor.green.base
+    case .Dog:
+        return MaterialColor.grey.base
+    case .Elephant, .Hippo, .Rino, .Mouse:
+        return MaterialColor.grey.darken1
+    case .Fox:
+        return MaterialColor.red.accent1
+    case .Panda, .Sheep, .Cat:
+        return MaterialColor.grey.lighten4
+    case .Pig:
+        return MaterialColor.pink.accent1
+    default:
+        return MaterialColor.purple.base
+    }
+}
+
+public func getRandomAnimal() -> Animal {
+    let randomIndex = Int(arc4random_uniform(UInt32(Names.count - 1)))
+    return Animals[randomIndex]
+}
+
+public func getRandomAnimalImage() -> UIImage {
+
+    let randomIndex = Int(arc4random_uniform(UInt32(Names.count)))
+    animalImage = UIImage(named: Names[randomIndex].rawValue)!
+    return animalImage
+}

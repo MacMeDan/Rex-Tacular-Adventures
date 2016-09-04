@@ -17,12 +17,12 @@ class TestingCollectionViewController: UIViewController, UICollectionViewDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(animals)
         prepareCollectionView()
-        self.navigationController?.navigationBarHidden = true
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        navigationController?.navigationBarHidden = true
+        collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        addBackButton()
     }
+
     func prepareCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
@@ -30,7 +30,7 @@ class TestingCollectionViewController: UIViewController, UICollectionViewDelegat
         let screenHeight = view.frame.height
 
         let margin: CGFloat = 40
-        layout.itemSize = CGSize(width: (screenWidth - margin)/4 - 10, height: screenHeight/3)
+        layout.itemSize = CGSize(width: (screenWidth - margin)/3 - 10, height: screenHeight/2)
 
         // we create the collection view object
         collectionView = UICollectionView(frame: CGRect(x: margin/2, y: 10, width: screenWidth - margin, height: screenHeight - 40), collectionViewLayout: layout)
@@ -38,7 +38,6 @@ class TestingCollectionViewController: UIViewController, UICollectionViewDelegat
             assertionFailure("Collection View was nil")
             return
         }
-
         collectionView.dataSource = self
         collectionView.delegate = self
 
@@ -52,7 +51,7 @@ class TestingCollectionViewController: UIViewController, UICollectionViewDelegat
     }
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("Selected A cell a index path \(indexPath)")
+        print("Selected A cell a index path row:\(indexPath.row) and section: \(indexPath.section)")
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -63,19 +62,16 @@ class TestingCollectionViewController: UIViewController, UICollectionViewDelegat
         cell.addSubview(dancingAnimal)
         cell.layout(dancingAnimal).top(10).left(10)
 
-        let label = MaterialLabel(frame: CGRect(x: 0, y: cell.frame.height - 30, width: cell.frame.width, height: 40))
+        let label = MaterialLabel()
         label.text = animal.name.rawValue
         label.textAlignment = .Center
         label.textColor = MaterialColor.red.base
         dancingAnimal.addSubview(label)
-        dancingAnimal.layout.center(label)
+        dancingAnimal.layout(label).left(100)
 
         return cell
     }
 
-    func getViewForGame(game: Animal) {
-        return
-    }
 }
 
 
