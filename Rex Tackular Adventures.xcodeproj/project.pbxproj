@@ -517,6 +517,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "MacMeDan.Rex-Tackular-Adventures";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -532,6 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "MacMeDan.Rex-Tackular-Adventures";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

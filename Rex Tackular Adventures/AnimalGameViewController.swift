@@ -8,19 +8,18 @@
 
 import UIKit
 import Material
+import AVFoundation
 
-
-class AnimalGameViewController: UIViewController {
+class AnimalGameViewController: UIViewController, Speakable {
     var crateClosed = true
     var crate = CrateAnimationsView()
-
+    var synth = AVSpeechSynthesizer()
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareView()
         prepareCrate()
         addBackButton()
     }
-
 
     func prepareView() {
         let titleLabel = UILabel()
@@ -40,8 +39,13 @@ class AnimalGameViewController: UIViewController {
     }
     
     func crateTapped() {
-        crateClosed ? crate.addOpenAnimation() : crate.addCloseAnimation({ Bool in
+        crateClosed ? crate.addOpenAnimation({ Bool in
+            if Bool {
+                self.speak("What Animal is this")
+            }
+        }) : crate.addCloseAnimation({ Bool in
                 if Bool {
+                    self.speak(String(self.crate.dancingAnimal.animal.name))
                     self.crate.dancingAnimal.reset()
                 }
             })
