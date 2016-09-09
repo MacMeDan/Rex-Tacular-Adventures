@@ -21,6 +21,7 @@ class LettersGame: UIViewController, Speakable {
         super.viewDidLoad()
         addBackButton()
         currentLetter = startValue
+        speak("The current letter is " + String(currentLetter) + ". Touch the screen to see the next letter.")
         setupLabel()
     }
     
