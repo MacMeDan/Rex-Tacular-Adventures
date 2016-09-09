@@ -19,6 +19,7 @@
 		37A02B431D70F89100C1C82F /* TestingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A02B421D70F89100C1C82F /* TestingCollectionViewController.swift */; };
 		37B0F2C81D835CCB007AEBE2 /* GamesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0F2C71D835CCB007AEBE2 /* GamesStruct.swift */; };
 		37B0F2CA1D835D81007AEBE2 /* LettersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0F2C91D835D81007AEBE2 /* LettersGame.swift */; };
+		37B0F2CC1D836714007AEBE2 /* Speakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0F2CB1D836714007AEBE2 /* Speakable.swift */; };
 		37B3D2D51D7CE6590037914D /* NumbersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3D2D41D7CE6590037914D /* NumbersGame.swift */; };
 		37F226541D554E240072FC84 /* Door.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F2264F1D554E240072FC84 /* Door.png */; };
 		37F226551D554E240072FC84 /* Foot.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226501D554E240072FC84 /* Foot.png */; };
@@ -56,6 +57,7 @@
 		37A02B421D70F89100C1C82F /* TestingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingCollectionViewController.swift; sourceTree = "<group>"; };
 		37B0F2C71D835CCB007AEBE2 /* GamesStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesStruct.swift; sourceTree = "<group>"; };
 		37B0F2C91D835D81007AEBE2 /* LettersGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LettersGame.swift; sourceTree = "<group>"; };
+		37B0F2CB1D836714007AEBE2 /* Speakable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speakable.swift; sourceTree = "<group>"; };
 		37B3D2D41D7CE6590037914D /* NumbersGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersGame.swift; sourceTree = "<group>"; };
 		37F2264F1D554E240072FC84 /* Door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Door.png; path = images/Door.png; sourceTree = "<group>"; };
 		37F226501D554E240072FC84 /* Foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Foot.png; path = images/Foot.png; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				379574CE1D5E7141007BC758 /* DancingAnimalView.swift */,
 				37F226591D554E930072FC84 /* CrateAnimationsView.swift */,
 				37B0F2C91D835D81007AEBE2 /* LettersGame.swift */,
+				37B0F2CB1D836714007AEBE2 /* Speakable.swift */,
 				370056001D541C7800F875B8 /* Public.swift */,
 				3738AEA11D3D8D5800BBC67D /* AnimalStruct.swift */,
 				37F2265D1D554ED10072FC84 /* actualImages */,
@@ -374,6 +377,7 @@
 			files = (
 				37B0F2C81D835CCB007AEBE2 /* GamesStruct.swift in Sources */,
 				37A02B431D70F89100C1C82F /* TestingCollectionViewController.swift in Sources */,
+				37B0F2CC1D836714007AEBE2 /* Speakable.swift in Sources */,
 				37B3D2D51D7CE6590037914D /* NumbersGame.swift in Sources */,
 				3738AEA21D3D8D5800BBC67D /* AnimalStruct.swift in Sources */,
 				3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */,

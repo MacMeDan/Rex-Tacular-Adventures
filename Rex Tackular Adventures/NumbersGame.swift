@@ -8,10 +8,12 @@
 
 import UIKit
 import Material
+import AVFoundation
 
-class NumbersGame: UIViewController {
+class NumbersGame: UIViewController, Speakable {
     var number = Int()
     let titleLabel = UILabel()
+    var synth = AVSpeechSynthesizer()
     var startNumber = 0
     var endNumber: Int!
 
@@ -43,6 +45,7 @@ class NumbersGame: UIViewController {
     func viewTapped() {
         number >= endNumber ? number = startNumber : (number += 1)
         titleLabel.text = String(number)
+        speak(String(number))
     }
 
 }
