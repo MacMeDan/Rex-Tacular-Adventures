@@ -8,6 +8,7 @@
 
 import UIKit
 import Material
+import AVFoundation
 
 class LettersGame: UIViewController {
     var currentLetter = UnicodeScalar("a")
@@ -15,6 +16,8 @@ class LettersGame: UIViewController {
 
     private var startValue = UnicodeScalar("a")
     private var endValue = UnicodeScalar("z")
+    let synth = AVSpeechSynthesizer()
+    var myUtterance = AVSpeechUtterance(string: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +39,11 @@ class LettersGame: UIViewController {
     
     func viewTapped() {
         currentLetter >= endValue ? currentLetter = startValue : (currentLetter = UnicodeScalar(currentLetter.value + 1))
+        myUtterance = AVSpeechUtterance(string: String(currentLetter))
+        myUtterance.rate = 0.3
+        synth.speakUtterance(myUtterance)
         titleLabel.text = String(currentLetter)
     }
+
     
 }
