@@ -9,7 +9,7 @@
 import UIKit
 import Material
 
-class NumbersView: UIViewController {
+class NumbersGame: UIViewController {
     var number = Int()
     let titleLabel = UILabel()
     var startNumber = 0

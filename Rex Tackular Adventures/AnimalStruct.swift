@@ -29,15 +29,6 @@ public enum Name: String {
     case Elephant   = "Elephant"
 }
 
-public enum Games: String {
-    case numbers    = "Numbers"
-    case OneThroughTen = "Numbers 1 - 10"
-    case TenThroughTwenty = "Numbers 10 - 20"
-    case shapes     = "Shapes"
-    case animals    = "Animals"
-    case Testing    = "Testing"
-}
-
 enum Type {
     case feline
     case reptile
@@ -77,7 +68,7 @@ func getColor(name: Name) -> UIColor {
         return MaterialColor.grey.base
     case .Bear:
         return MaterialColor.brown.base
-    case .Bird:
+    case .Elephant, .Hippo, .Bird:
         return MaterialColor.blue.lighten2
     case  .Lion, .Tiger:
         return MaterialColor.orange.lighten4
@@ -85,7 +76,7 @@ func getColor(name: Name) -> UIColor {
         return MaterialColor.green.base
     case .Dog:
         return MaterialColor.grey.base
-    case .Elephant, .Hippo, .Rino, .Mouse:
+    case .Rino, .Mouse:
         return MaterialColor.grey.darken1
     case .Fox:
         return MaterialColor.red.accent1
@@ -94,7 +85,7 @@ func getColor(name: Name) -> UIColor {
     case .Pig:
         return MaterialColor.pink.accent1
     default:
-        return MaterialColor.purple.base
+        return MaterialColor.yellow.base
     }
 }
 

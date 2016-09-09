@@ -17,7 +17,9 @@
 		3738AEA21D3D8D5800BBC67D /* AnimalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738AEA11D3D8D5800BBC67D /* AnimalStruct.swift */; };
 		379574CF1D5E7141007BC758 /* DancingAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379574CE1D5E7141007BC758 /* DancingAnimalView.swift */; };
 		37A02B431D70F89100C1C82F /* TestingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A02B421D70F89100C1C82F /* TestingCollectionViewController.swift */; };
-		37B3D2D51D7CE6590037914D /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3D2D41D7CE6590037914D /* NumbersView.swift */; };
+		37B0F2C81D835CCB007AEBE2 /* GamesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0F2C71D835CCB007AEBE2 /* GamesStruct.swift */; };
+		37B0F2CA1D835D81007AEBE2 /* LettersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0F2C91D835D81007AEBE2 /* LettersGame.swift */; };
+		37B3D2D51D7CE6590037914D /* NumbersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3D2D41D7CE6590037914D /* NumbersGame.swift */; };
 		37F226541D554E240072FC84 /* Door.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F2264F1D554E240072FC84 /* Door.png */; };
 		37F226551D554E240072FC84 /* Foot.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226501D554E240072FC84 /* Foot.png */; };
 		37F2265B1D554E930072FC84 /* CrateAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F226591D554E930072FC84 /* CrateAnimationsView.swift */; };
@@ -52,7 +54,9 @@
 		3738AEA11D3D8D5800BBC67D /* AnimalStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalStruct.swift; sourceTree = "<group>"; };
 		379574CE1D5E7141007BC758 /* DancingAnimalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DancingAnimalView.swift; sourceTree = "<group>"; };
 		37A02B421D70F89100C1C82F /* TestingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingCollectionViewController.swift; sourceTree = "<group>"; };
-		37B3D2D41D7CE6590037914D /* NumbersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
+		37B0F2C71D835CCB007AEBE2 /* GamesStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesStruct.swift; sourceTree = "<group>"; };
+		37B0F2C91D835D81007AEBE2 /* LettersGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LettersGame.swift; sourceTree = "<group>"; };
+		37B3D2D41D7CE6590037914D /* NumbersGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersGame.swift; sourceTree = "<group>"; };
 		37F2264F1D554E240072FC84 /* Door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Door.png; path = images/Door.png; sourceTree = "<group>"; };
 		37F226501D554E240072FC84 /* Foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Foot.png; path = images/Foot.png; sourceTree = "<group>"; };
 		37F226591D554E930072FC84 /* CrateAnimationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrateAnimationsView.swift; sourceTree = "<group>"; };
@@ -111,9 +115,11 @@
 				3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */,
 				37A02B421D70F89100C1C82F /* TestingCollectionViewController.swift */,
 				372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */,
-				37B3D2D41D7CE6590037914D /* NumbersView.swift */,
+				37B3D2D41D7CE6590037914D /* NumbersGame.swift */,
+				37B0F2C71D835CCB007AEBE2 /* GamesStruct.swift */,
 				379574CE1D5E7141007BC758 /* DancingAnimalView.swift */,
 				37F226591D554E930072FC84 /* CrateAnimationsView.swift */,
+				37B0F2C91D835D81007AEBE2 /* LettersGame.swift */,
 				370056001D541C7800F875B8 /* Public.swift */,
 				3738AEA11D3D8D5800BBC67D /* AnimalStruct.swift */,
 				37F2265D1D554ED10072FC84 /* actualImages */,
@@ -366,8 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B0F2C81D835CCB007AEBE2 /* GamesStruct.swift in Sources */,
 				37A02B431D70F89100C1C82F /* TestingCollectionViewController.swift in Sources */,
-				37B3D2D51D7CE6590037914D /* NumbersView.swift in Sources */,
+				37B3D2D51D7CE6590037914D /* NumbersGame.swift in Sources */,
 				3738AEA21D3D8D5800BBC67D /* AnimalStruct.swift in Sources */,
 				3738AEA01D3D894E00BBC67D /* InitalCollectionViewController.swift in Sources */,
 				372C63361D4E7AC300EB32A8 /* AnimalGameViewController.swift in Sources */,
@@ -375,6 +382,7 @@
 				379574CF1D5E7141007BC758 /* DancingAnimalView.swift in Sources */,
 				37F2265B1D554E930072FC84 /* CrateAnimationsView.swift in Sources */,
 				3738AE801D3D888600BBC67D /* AppDelegate.swift in Sources */,
+				37B0F2CA1D835D81007AEBE2 /* LettersGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
