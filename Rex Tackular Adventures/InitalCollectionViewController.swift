@@ -30,7 +30,7 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         let screenHeight = view.frame.height
         
         let margin: CGFloat = 40
-        layout.itemSize = CGSize(width: (screenWidth - margin)/4 - 10, height: screenHeight/6)
+        layout.itemSize = CGSize(width: (screenWidth - margin)/3 - 10, height: screenHeight/4)
         
         // we create the collection view object
         collectionView = UICollectionView(frame: CGRect(x: margin/2, y: 10, width: screenWidth - margin, height: screenHeight - 40), collectionViewLayout: layout)
@@ -41,8 +41,6 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "dialBtn")
-        collectionView.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header")
         self.view.addSubview(collectionView)
     }
     
@@ -54,18 +52,23 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let game = games[indexPath.row]
-        getViewForGame(game)
+        getDestinationViewForGame(game)
     }
 
      func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
         let game = games[indexPath.row]
-        let button = FabButton()
-        button.userInteractionEnabled = false
-        button.backgroundColor = MaterialColor.clear
-        button.setImage(getRandomAnimalImage(), forState: .Normal)
-        cell.addSubview(button)
-        cell.layout(button).center(offsetY: -10)
+        let gameImage = UIImageView()
+
+        switch game {
+        case .animals:
+            gameImage.image = getRandomAnimalImage()
+        default:
+            gameImage.image = getRandomAnimalImage()
+        }
+        
+        cell.addSubview(gameImage)
+        cell.layout(gameImage).center().width(100).height(100)
         
         cell.backgroundColor = MaterialColor.lightBlue.base
         let label = MaterialLabel(frame: CGRect(x: 0, y: cell.frame.height - 30, width: cell.frame.width, height: 40))
@@ -76,7 +79,7 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         return cell
     }
     
-    func getViewForGame(game: Games) {
+    func getDestinationViewForGame(game: Games) {
         switch game {
         case .animals:
             self.navigationController?.pushViewController(AnimalGameViewController(), animated: true)
