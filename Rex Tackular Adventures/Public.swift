@@ -34,16 +34,16 @@ public func setupAnimals() {
 
 extension UIViewController {
     func addBackButton() {
-        let button = FabButton()
-        button.setTitle("Back", forState: .Normal)
-        button.backgroundColor = MaterialColor.clear
-        button.addTarget(self, action: #selector(dismissView), forControlEvents: .TouchUpInside)
+        let button = UIButton()
+        button.setTitle("Back", for: .normal)
+        button.backgroundColor = UIColor.clear
+        button.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         view.addSubview(button)
         view.layout(button).top(20).left(20).width(50).height(50)
     }
 
     func dismissView() {
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

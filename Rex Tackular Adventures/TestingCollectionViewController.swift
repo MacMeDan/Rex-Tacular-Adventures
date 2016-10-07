@@ -18,8 +18,8 @@ class TestingCollectionViewController: UIViewController, UICollectionViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareCollectionView()
-        navigationController?.navigationBarHidden = true
-        collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        navigationController?.isNavigationBarHidden = true
+        collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         addBackButton()
     }
 
@@ -46,32 +46,28 @@ class TestingCollectionViewController: UIViewController, UICollectionViewDelegat
 
     // MARK: UICollectionViewDataSource
 
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return animals.count
     }
 
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected A cell a index path row:\(indexPath.row) and section: \(indexPath.section)")
     }
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         let animal = animals[indexPath.row]
         let dancingAnimal = DancingAnimalView()
-        dancingAnimal.getThisAnimalDancing(animal)
+        dancingAnimal.getThisAnimalDancing(dissOne: animal)
         cell.addSubview(dancingAnimal)
         cell.layout(dancingAnimal).top(10).left(10)
 
-        let label = MaterialLabel()
+        let label = UILabel()
         label.text = animal.name.rawValue
-        label.textAlignment = .Center
-        label.textColor = MaterialColor.red.base
+        label.textAlignment = .center
+        label.textColor = Color.red.base
         dancingAnimal.addSubview(label)
         dancingAnimal.layout(label).left(100)
-
         return cell
     }
-
 }
-
-

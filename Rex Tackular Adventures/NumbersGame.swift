@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Material
 import AVFoundation
+import Material
 
 class NumbersGame: UIViewController, Speakable {
     var number = Int()
@@ -33,11 +33,11 @@ class NumbersGame: UIViewController, Speakable {
     func setupLabel() {
 
         titleLabel.font = UIFont(name: "Chalkduster", size: 350)
-        titleLabel.textColor = MaterialColor.white
+        titleLabel.textColor = UIColor.white
         titleLabel.text = String(number)
         view.layout(titleLabel).centerHorizontally().centerVertically()
         view.addSubview(titleLabel)
-        view.backgroundColor = MaterialColor.green.darken4
+        view.backgroundColor = UIColor.green
         let crateGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         self.view.addGestureRecognizer(crateGesture)
     }
@@ -45,7 +45,7 @@ class NumbersGame: UIViewController, Speakable {
     func viewTapped() {
         number >= endNumber ? number = startNumber : (number += 1)
         titleLabel.text = String(number)
-        speak(String(number))
+        speak(string: String(number))
     }
 
 }

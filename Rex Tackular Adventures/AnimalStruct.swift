@@ -6,7 +6,6 @@
 //  Copyright © 2016 MacMeDan. All rights reserved.
 //
 import UIKit
-import Material
 
 public enum Name: String {
     case Dog        = "Dog"
@@ -50,10 +49,10 @@ public struct Animal {
     let name : Name
     let size : CGFloat
     init(hasArms: Bool = false, name: Name, size: CGFloat) {
-        self.type = getType(name)
+        self.type = getType(name: name)
         self.size = size
         self.name = name
-        self.color = getColor(name)
+        self.color = getColor(name: name)
     }
 }
 
@@ -65,27 +64,27 @@ public var Animals: [Animal] = []
 func getColor(name: Name) -> UIColor {
     switch  name {
     case .Ape:
-        return MaterialColor.grey.base
+        return UIColor.black
     case .Bear:
-        return MaterialColor.brown.base
+        return UIColor.black
     case .Elephant, .Hippo, .Bird:
-        return MaterialColor.blue.lighten2
+        return UIColor.black
     case  .Lion, .Tiger:
-        return MaterialColor.orange.lighten4
+        return UIColor.black
     case .Crock:
-        return MaterialColor.green.base
+        return UIColor.black
     case .Dog:
-        return MaterialColor.grey.base
+        return UIColor.black
     case .Rino, .Mouse:
-        return MaterialColor.grey.darken1
+        return UIColor.black
     case .Fox:
-        return MaterialColor.red.accent1
+        return UIColor.black
     case .Panda, .Sheep, .Cat:
-        return MaterialColor.grey.lighten4
+        return UIColor.black
     case .Pig:
-        return MaterialColor.pink.accent1
+        return UIColor.black
     default:
-        return MaterialColor.yellow.base
+        return UIColor.black
     }
 }
 

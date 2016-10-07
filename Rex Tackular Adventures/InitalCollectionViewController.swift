@@ -18,8 +18,8 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareCollectionView()
-        self.navigationController?.navigationBarHidden = true
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.navigationController?.isNavigationBarHidden = true
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -46,17 +46,17 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
     
     // MARK: UICollectionViewDataSource
 
-     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return games.count
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let game = games[indexPath.row]
-        getDestinationViewForGame(game)
+        getDestinationViewForGame(game: game)
     }
 
-     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         let game = games[indexPath.row]
         let gameImage = UIImageView()
 
@@ -70,11 +70,11 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         cell.addSubview(gameImage)
         cell.layout(gameImage).center().width(100).height(100)
         
-        cell.backgroundColor = MaterialColor.lightBlue.base
-        let label = MaterialLabel(frame: CGRect(x: 0, y: cell.frame.height - 30, width: cell.frame.width, height: 40))
+        cell.backgroundColor = Color.lightBlue.base
+        let label = UILabel(frame: CGRect(x: 0, y: cell.frame.height - 30, width: cell.frame.width, height: 40))
         label.text = game.rawValue
-        label.textAlignment = .Center
-        label.textColor = MaterialColor.white
+        label.textAlignment = .center
+        label.textColor = Color.white
         cell.addSubview(label)
         return cell
     }

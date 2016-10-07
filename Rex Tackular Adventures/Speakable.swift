@@ -19,8 +19,8 @@ extension Speakable where Self:UIViewController {
         let myUtterance = AVSpeechUtterance(string: string)
         myUtterance.rate = 0.3
         myUtterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        synth.pauseSpeakingAtBoundary(.Word)
-        synth.speakUtterance(myUtterance)
+        synth.pauseSpeaking(at: .word)
+        synth.speak(myUtterance)
     }
 }
 

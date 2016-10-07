@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Material
 
 
 class CrateAnimationsView : UIView {
@@ -39,9 +40,9 @@ class CrateAnimationsView : UIView {
 			var xScale = self.bounds.size.width / scalingView.bounds.size.width
 			var yScale = self.bounds.size.height / scalingView.bounds.size.height
 			switch contentMode {
-			case .ScaleToFill:
+			case .scaleToFill:
 				break
-			case .ScaleAspectFill:
+			case .scaleAspectFill:
 				let scale = max(xScale, yScale)
 				xScale = scale
 				yScale = scale
@@ -50,8 +51,8 @@ class CrateAnimationsView : UIView {
 				xScale = scale
 				yScale = scale
 			}
-			scalingView.transform = CGAffineTransformMakeScale(xScale, yScale)
-			scalingView.center = CGPoint(x:CGRectGetMidX(self.bounds), y:CGRectGetMidY(self.bounds))
+			scalingView.transform = CGAffineTransform(scaleX: xScale, y: yScale)
+			scalingView.center = CGPoint(x:self.bounds.midX, y:self.bounds.midY)
 		}
 
 	}
@@ -61,7 +62,7 @@ class CrateAnimationsView : UIView {
 
 	func setupHierarchy() {
         fullCrate = UIView()
-        let bundle = NSBundle(forClass:self.dynamicType)
+        let bundle = Bundle(for:type(of: self))
 		var viewsByName: [String : UIView] = [:]
 		let __scaling__ = UIView()
 		__scaling__.bounds = CGRect(x:0, y:0, width:1136, height:768)
@@ -76,13 +77,13 @@ class CrateAnimationsView : UIView {
 		let opencrate = UIImageView()
 		opencrate.bounds = CGRect(x:0, y:0, width:527.0, height:528.0)
 		var imgOpencrate: UIImage!
-		if let imagePath = bundle.pathForResource("Opencrate.png", ofType:nil) {
+		if let imagePath = bundle.path(forResource: "Opencrate.png", ofType:nil) {
 			imgOpencrate = UIImage(contentsOfFile:imagePath)
 		}else {
 			print("** Warning: Could not create image from 'Opencrate.png'. Please make sure that it is added to the project directly (not in a folder reference).")
 		}
 		opencrate.image = imgOpencrate
-		opencrate.contentMode = .Center
+		opencrate.contentMode = .center
 		opencrate.layer.position = CGPoint(x:265.242, y:264.000)
 		fullCrate.addSubview(opencrate)
 		viewsByName["Opencrate"] = opencrate
@@ -100,14 +101,14 @@ class CrateAnimationsView : UIView {
         door.bounds = CGRect(x:0, y:0, width:511.0, height:497.0)
         door.layer.anchorPoint = CGPoint(x:-0.003, y:0.500)
         var imgDoor: UIImage!
-        let bundle = NSBundle(forClass:self.dynamicType)
-        if let imagePath = bundle.pathForResource("Door.png", ofType:nil) {
+        let bundle = Bundle(for:type(of: self))
+        if let imagePath = bundle.path(forResource: "Door.png", ofType:nil) {
             imgDoor = UIImage(contentsOfFile:imagePath)
         }else {
             print("** Warning: Could not create image from 'Door.png'. Please make sure that it is added to the project directly (not in a folder reference).")
         }
         door.image = imgDoor
-        door.contentMode = .Center
+        door.contentMode = .center
         door.layer.position = CGPoint(x:-1.711, y:271.598)
         fullCrate.addSubview(door)
         return door
@@ -116,19 +117,19 @@ class CrateAnimationsView : UIView {
 	// - MARK: Close
 
 	func addCloseAnimation() {
-		addCloseAnimationWithBeginTime(0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: nil)
+		addCloseAnimationWithBeginTime(beginTime: 0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: nil)
 	}
 
 	func addCloseAnimation(completion: ((Bool) -> Void)?) {
-		addCloseAnimationWithBeginTime(0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: completion)
+		addCloseAnimationWithBeginTime(beginTime: 0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: completion)
 	}
 
-	func addCloseAnimation(removedOnCompletion removedOnCompletion: Bool) {
-		addCloseAnimationWithBeginTime(0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: nil)
+	func addCloseAnimation(removedOnCompletion: Bool) {
+		addCloseAnimationWithBeginTime(beginTime: 0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: nil)
 	}
 
-	func addCloseAnimation(removedOnCompletion removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
-		addCloseAnimationWithBeginTime(0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: completion)
+	func addCloseAnimation(removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
+		addCloseAnimationWithBeginTime(beginTime: 0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: completion)
 	}
 
 	func addCloseAnimationWithBeginTime(beginTime: CFTimeInterval, fillMode: String, removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
@@ -137,56 +138,56 @@ class CrateAnimationsView : UIView {
 		if let complete = completion {
 			let representativeAnimation = CABasicAnimation(keyPath: "not.a.real.key")
 			representativeAnimation.duration = 0.500
-			representativeAnimation.delegate = self
-			self.layer.addAnimation(representativeAnimation, forKey: "Close")
-			self.animationCompletions[layer.animationForKey("Close")!] = complete
+			//representativeAnimation.delegate = self
+			self.layer.add(representativeAnimation, forKey: "Close")
+			self.animationCompletions[layer.animation(forKey: "Close")!] = complete
 		}
 
 		let doorScaleXAnimation = CAKeyframeAnimation(keyPath: "transform.scale.x")
 		doorScaleXAnimation.duration = 0.500
 		doorScaleXAnimation.values = [-0.292 as Float, 0.999 as Float]
-		doorScaleXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		doorScaleXAnimation.keyTimes = [0.0, 1.0]
 		doorScaleXAnimation.timingFunctions = [anticipateTiming]
 		doorScaleXAnimation.beginTime = beginTime
 		doorScaleXAnimation.fillMode = fillMode
-		doorScaleXAnimation.removedOnCompletion = removedOnCompletion
-		self.viewsByName["Door"]?.layer.addAnimation(doorScaleXAnimation, forKey:"Close_ScaleX")
+		doorScaleXAnimation.isRemovedOnCompletion = removedOnCompletion
+		self.viewsByName["Door"]?.layer.add(doorScaleXAnimation, forKey:"Close_ScaleX")
 
 		let doorTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		doorTranslationXAnimation.duration = 0.500
 		doorTranslationXAnimation.values = [2.211 as Float, 0.001 as Float]
-		doorTranslationXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		doorTranslationXAnimation.keyTimes = [0.0, 1.0]
 		doorTranslationXAnimation.timingFunctions = [anticOverTiming]
 		doorTranslationXAnimation.beginTime = beginTime
 		doorTranslationXAnimation.fillMode = fillMode
-		doorTranslationXAnimation.removedOnCompletion = removedOnCompletion
-		self.viewsByName["Door"]?.layer.addAnimation(doorTranslationXAnimation, forKey:"Close_TranslationX")
+		doorTranslationXAnimation.isRemovedOnCompletion = removedOnCompletion
+		self.viewsByName["Door"]?.layer.add(doorTranslationXAnimation, forKey:"Close_TranslationX")
 	}
 
 	func removeCloseAnimation() {
-		self.layer.removeAnimationForKey("Close")
-		self.viewsByName["Door"]?.layer.removeAnimationForKey("Close_ScaleX")
-		self.viewsByName["Door"]?.layer.removeAnimationForKey("Close_TranslationX")
+		self.layer.removeAnimation(forKey: "Close")
+		self.viewsByName["Door"]?.layer.removeAnimation(forKey: "Close_ScaleX")
+		self.viewsByName["Door"]?.layer.removeAnimation(forKey: "Close_TranslationX")
 	}
 
 	// - MARK: Open
 
 	func addOpenAnimation() {
-		addOpenAnimationWithBeginTime(0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: nil)
+		addOpenAnimationWithBeginTime(beginTime: 0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: nil)
         dancingAnimal.addStandingAnimation()
 	}
 
 	func addOpenAnimation(completion: ((Bool) -> Void)?) {
-		addOpenAnimationWithBeginTime(0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: completion)
+		addOpenAnimationWithBeginTime(beginTime: 0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: completion)
         dancingAnimal.addStandingAnimation()
 	}
 
-	func addOpenAnimation(removedOnCompletion removedOnCompletion: Bool) {
-		addOpenAnimationWithBeginTime(0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: nil)
+	func addOpenAnimation(removedOnCompletion: Bool) {
+		addOpenAnimationWithBeginTime(beginTime: 0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: nil)
 	}
 
-	func addOpenAnimation(removedOnCompletion removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
-		addOpenAnimationWithBeginTime(0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: completion)
+	func addOpenAnimation(removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
+		addOpenAnimationWithBeginTime(beginTime: 0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: completion)
 	}
 
 	func addOpenAnimationWithBeginTime(beginTime: CFTimeInterval, fillMode: String, removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
@@ -195,41 +196,41 @@ class CrateAnimationsView : UIView {
 		if let complete = completion {
 			let representativeAnimation = CABasicAnimation(keyPath: "not.a.real.key")
 			representativeAnimation.duration = 0.500
-			representativeAnimation.delegate = self
-			self.layer.addAnimation(representativeAnimation, forKey: "Open")
-			self.animationCompletions[layer.animationForKey("Open")!] = complete
+			//representativeAnimation.delegate = self
+			self.layer.add(representativeAnimation, forKey: "Open")
+			self.animationCompletions[layer.animation(forKey: "Open")!] = complete
 		}
 
 		let doorScaleXAnimation = CAKeyframeAnimation(keyPath: "transform.scale.x")
 		doorScaleXAnimation.duration = 0.500
 		doorScaleXAnimation.values = [1.000 as Float, -0.292 as Float]
-		doorScaleXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+        doorScaleXAnimation.keyTimes = [0, 1]
 		doorScaleXAnimation.timingFunctions = [overshootTiming]
 		doorScaleXAnimation.beginTime = beginTime
 		doorScaleXAnimation.fillMode = fillMode
-		doorScaleXAnimation.removedOnCompletion = removedOnCompletion
-		self.viewsByName["Door"]?.layer.addAnimation(doorScaleXAnimation, forKey:"Open_ScaleX")
+		doorScaleXAnimation.isRemovedOnCompletion = removedOnCompletion
+		self.viewsByName["Door"]?.layer.add(doorScaleXAnimation, forKey:"Open_ScaleX")
 
 		let doorTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		doorTranslationXAnimation.duration = 0.500
 		doorTranslationXAnimation.values = [0.000 as Float, 2.211 as Float]
-		doorTranslationXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
-		doorTranslationXAnimation.timingFunctions = [easeInOutTiming]
+		doorTranslationXAnimation.keyTimes = [0, 1]
+        doorTranslationXAnimation.timingFunctions = [easeInOutTiming]
 		doorTranslationXAnimation.beginTime = beginTime
 		doorTranslationXAnimation.fillMode = fillMode
-		doorTranslationXAnimation.removedOnCompletion = removedOnCompletion
-		self.viewsByName["Door"]?.layer.addAnimation(doorTranslationXAnimation, forKey:"Open_TranslationX")
+		doorTranslationXAnimation.isRemovedOnCompletion = removedOnCompletion
+		self.viewsByName["Door"]?.layer.add(doorTranslationXAnimation, forKey:"Open_TranslationX")
 	}
 
 	func removeOpenAnimation() {
-		self.layer.removeAnimationForKey("Open")
-		self.viewsByName["Door"]?.layer.removeAnimationForKey("Open_ScaleX")
-		self.viewsByName["Door"]?.layer.removeAnimationForKey("Open_TranslationX")
+		self.layer.removeAnimation(forKey: "Open")
+		self.viewsByName["Door"]?.layer.removeAnimation(forKey: "Open_ScaleX")
+		self.viewsByName["Door"]?.layer.removeAnimation(forKey: "Open_TranslationX")
 	}
 
-	override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+    func animationDidStop(anim: CAAnimation, finished flag: Bool) {
 		if let completion = self.animationCompletions[anim] {
-			self.animationCompletions.removeValueForKey(anim)
+			self.animationCompletions.removeValue(forKey: anim)
 			completion(flag)
 		}
 	}
@@ -238,8 +239,8 @@ class CrateAnimationsView : UIView {
 		for subview in viewsByName.values {
 			subview.layer.removeAllAnimations()
 		}
-		self.layer.removeAnimationForKey("Close")
-		self.layer.removeAnimationForKey("Open")
+		self.layer.removeAnimation(forKey: "Close")
+		self.layer.removeAnimation(forKey: "Open")
 	}
 
 

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Material
 import AVFoundation
+import Material
 
 class LettersGame: UIViewController, Speakable {
     var currentLetter = UnicodeScalar("a")
@@ -21,25 +21,25 @@ class LettersGame: UIViewController, Speakable {
         super.viewDidLoad()
         addBackButton()
         currentLetter = startValue
-        speak("The current letter is " + String(currentLetter) + ". Touch the screen to see the next letter.")
+        speak(string: "The current letter is " + String(describing: currentLetter) + ". Touch the screen to see the next letter.")
         setupLabel()
     }
     
     func setupLabel() {
         titleLabel.font = UIFont(name: "Chalkduster", size: 350)
-        titleLabel.textColor = MaterialColor.white
-        titleLabel.text = String(currentLetter)
+        titleLabel.textColor = UIColor.white
+        titleLabel.text = String(describing: currentLetter)
         view.layout(titleLabel).centerHorizontally().centerVertically()
         view.addSubview(titleLabel)
-        view.backgroundColor = MaterialColor.blue.darken4
+        view.backgroundColor = UIColor.blue
         let crateGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         self.view.addGestureRecognizer(crateGesture)
     }
     
     func viewTapped() {
-        currentLetter >= endValue ? currentLetter = startValue : (currentLetter = UnicodeScalar(currentLetter.value + 1))
-        speak(String(currentLetter))
-        titleLabel.text = String(currentLetter)
+        String(describing: currentLetter) >= String(describing: endValue) ? currentLetter = startValue : (currentLetter = UnicodeScalar((currentLetter?.value)! + 1))
+        speak(string: String(describing: currentLetter))
+        titleLabel.text = String(describing: currentLetter)
     }
     
 }

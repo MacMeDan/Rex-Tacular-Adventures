@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Material
 import AVFoundation
+import Material
 
 class AnimalGameViewController: UIViewController, Speakable {
     var crateClosed = true
@@ -24,11 +24,11 @@ class AnimalGameViewController: UIViewController, Speakable {
     func prepareView() {
         let titleLabel = UILabel()
         titleLabel.font = UIFont(name: "Chalkduster", size: 45)
-        titleLabel.textColor = MaterialColor.white
+        titleLabel.textColor = UIColor.white
         titleLabel.text = "What Animal is this!"
         view.layout(titleLabel).centerHorizontally().top(20)
         view.addSubview(titleLabel)
-        view.backgroundColor = MaterialColor.lightBlue.darken2
+        view.backgroundColor = UIColor.blue
         let crateGesture = UITapGestureRecognizer(target: self, action: #selector(crateTapped))
         self.view.addGestureRecognizer(crateGesture)
     }
@@ -39,16 +39,13 @@ class AnimalGameViewController: UIViewController, Speakable {
     }
     
     func crateTapped() {
-        crateClosed ? crate.addOpenAnimation({ Bool in
-            if Bool {
-                self.speak("What Animal is this")
-            }
-        }) : crate.addCloseAnimation({ Bool in
-                if Bool {
-                    self.speak(String(self.crate.dancingAnimal.animal.name))
-                    self.crate.dancingAnimal.reset()
-                }
+        if crateClosed {
+            crate.addCloseAnimation(completion: { (Bool) in
+            self.crateClosed = !self.crateClosed
+            })} else  {
+            crate.addOpenAnimation(completion: { (Bool) in
+                self.crateClosed = !self.crateClosed
             })
-        crateClosed = !crateClosed
+        }
     }
 }
