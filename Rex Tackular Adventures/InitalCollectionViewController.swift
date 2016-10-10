@@ -91,6 +91,7 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
             navigationController?.pushViewController(NumbersGame(start: 10, end: 20), animated: true)
         case .letters:
             navigationController?.pushViewController(LettersGame(), animated: true)
+    
         default:
             return
         }
