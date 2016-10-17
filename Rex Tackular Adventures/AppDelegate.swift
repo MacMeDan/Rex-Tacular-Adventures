@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let view = UINavigationController.init(rootViewController: GameViewController())
+        let view = UINavigationController.init(rootViewController: InitalCollectionViewController())
         window?.rootViewController = view
         window?.makeKeyAndVisible()
         setupAnimals()

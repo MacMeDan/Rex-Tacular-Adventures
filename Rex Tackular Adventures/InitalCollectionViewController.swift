@@ -84,7 +84,7 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         case .animals:
             self.navigationController?.pushViewController(AnimalGameViewController(), animated: true)
         case .Testing:
-            navigationController?.pushViewController(TestingCollectionViewController(), animated: true)
+            navigationController?.pushViewController(GameViewController(), animated: true)
         case .OneThroughTen:
             navigationController?.pushViewController(NumbersGame(start: 0, end: 10), animated: true)
         case .TenThroughTwenty:

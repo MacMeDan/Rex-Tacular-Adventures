@@ -72,6 +72,8 @@
 		37B0F2CA1D835D81007AEBE2 /* LettersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0F2C91D835D81007AEBE2 /* LettersGame.swift */; };
 		37B0F2CC1D836714007AEBE2 /* Speakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0F2CB1D836714007AEBE2 /* Speakable.swift */; };
 		37B3D2D51D7CE6590037914D /* NumbersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3D2D41D7CE6590037914D /* NumbersGame.swift */; };
+		37E663621DB45D7600F6047C /* StarPing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 37E663611DB45D7600F6047C /* StarPing.wav */; };
+		37E663641DB45E6A00F6047C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E663631DB45E6A00F6047C /* Main.storyboard */; };
 		37E6F6FE1DA8486700B148C5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6F6FD1DA8486700B148C5 /* GameViewController.swift */; };
 		37F226541D554E240072FC84 /* Door.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F2264F1D554E240072FC84 /* Door.png */; };
 		37F226551D554E240072FC84 /* Foot.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226501D554E240072FC84 /* Foot.png */; };
@@ -171,6 +173,8 @@
 		37B0F2C91D835D81007AEBE2 /* LettersGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LettersGame.swift; sourceTree = "<group>"; };
 		37B0F2CB1D836714007AEBE2 /* Speakable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speakable.swift; sourceTree = "<group>"; };
 		37B3D2D41D7CE6590037914D /* NumbersGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersGame.swift; sourceTree = "<group>"; };
+		37E663611DB45D7600F6047C /* StarPing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = StarPing.wav; sourceTree = "<group>"; };
+		37E663631DB45E6A00F6047C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		37E6F6FD1DA8486700B148C5 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		37F2264F1D554E240072FC84 /* Door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Door.png; path = images/Door.png; sourceTree = "<group>"; };
 		37F226501D554E240072FC84 /* Foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Foot.png; path = images/Foot.png; sourceTree = "<group>"; };
@@ -253,8 +257,10 @@
 				37E6F6FD1DA8486700B148C5 /* GameViewController.swift */,
 				3705ABFC1D95C72F006318EC /* JumpintViewController.swift */,
 				3705AC5F1D95DFB0006318EC /* GameState.swift */,
+				37E663631DB45E6A00F6047C /* Main.storyboard */,
 				3705AC571D95D1ED006318EC /* GameObjectNode.swift */,
 				3705AC611D95E4B0006318EC /* EndGameScene.swift */,
+				37E663611DB45D7600F6047C /* StarPing.wav */,
 				3705AC5C1D95DAC8006318EC /* Levelplist */,
 			);
 			name = JumpGame;
@@ -424,10 +430,12 @@
 				3738AE8A1D3D888600BBC67D /* LaunchScreen.storyboard in Resources */,
 				3705AC4E1D95C866006318EC /* Background17.png in Resources */,
 				3705AC391D95C866006318EC /* Background06@2x.png in Resources */,
+				37E663641DB45E6A00F6047C /* Main.storyboard in Resources */,
 				3705AC4D1D95C866006318EC /* Background16@2x.png in Resources */,
 				3705AC3D1D95C866006318EC /* Background08@2x.png in Resources */,
 				3705AC421D95C866006318EC /* Background11.png in Resources */,
 				3705AC411D95C866006318EC /* Background10@2x.png in Resources */,
+				37E663621DB45D7600F6047C /* StarPing.wav in Resources */,
 				3705AC461D95C866006318EC /* Background13.png in Resources */,
 				3705AC341D95C866006318EC /* Background04.png in Resources */,
 				3705AC4A1D95C866006318EC /* Background15.png in Resources */,
