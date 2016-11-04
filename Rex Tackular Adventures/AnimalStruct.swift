@@ -6,6 +6,7 @@
 //  Copyright © 2016 MacMeDan. All rights reserved.
 //
 import UIKit
+import Material
 
 public enum Name: String {
     case Dog        = "Dog"
@@ -63,26 +64,22 @@ public var Animals: [Animal] = []
 
 func getColor(name: Name) -> UIColor {
     switch  name {
-    case .Ape:
-        return UIColor.black
-    case .Bear:
-        return UIColor.black
+    case .Bear, .Dog:
+        return .brown
     case .Elephant, .Hippo, .Bird:
-        return UIColor.black
+        return Color.blue.lighten2
     case  .Lion, .Tiger:
-        return UIColor.black
+        return Color.yellow.lighten2
     case .Crock:
-        return UIColor.black
-    case .Dog:
-        return UIColor.black
-    case .Rino, .Mouse:
-        return UIColor.black
+        return Color.green.lighten2
+    case .Rino, .Mouse, .Ape:
+        return Color.grey.darken1
     case .Fox:
-        return UIColor.black
+        return Color.yellow.accent2
     case .Panda, .Sheep, .Cat:
-        return UIColor.black
+        return .white
     case .Pig:
-        return UIColor.black
+        return Color.pink.lighten3
     default:
         return UIColor.black
     }

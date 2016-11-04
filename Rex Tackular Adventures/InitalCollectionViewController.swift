@@ -17,6 +17,7 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundAudioManager.shared.setupAudioSession()
         prepareCollectionView()
         self.navigationController?.isNavigationBarHidden = true
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -84,7 +85,7 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
         case .animals:
             self.navigationController?.pushViewController(AnimalGameViewController(), animated: true)
         case .Testing:
-            navigationController?.pushViewController(GameViewController(), animated: true)
+            navigationController?.pushViewController(TestingCollectionViewController(), animated: true)
         case .OneThroughTen:
             navigationController?.pushViewController(NumbersGame(start: 0, end: 10), animated: true)
         case .TenThroughTwenty:
