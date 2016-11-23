@@ -17,7 +17,7 @@ class InitalCollectionViewController: UIViewController, UICollectionViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundAudioManager.shared.setupAudioSession()
+        BGAudio.shared.setupAudioSession()
         prepareCollectionView()
         self.navigationController?.isNavigationBarHidden = true
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)

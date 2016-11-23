@@ -26,7 +26,7 @@ class AnimalGameViewController: UIViewController, Speakable {
     func prepareView() {
         let background = UIImageView(frame: view.frame)
         background.image = #imageLiteral(resourceName: "jungleBackground")
-        backgroundAudioManager.shared.playJungleBackground()
+        BGAudio.shared.playJungleBackground()
         background.contentMode = .scaleAspectFill
         titleLabel.font = UIFont(name: "Chalkduster", size: 45)
         titleLabel.textColor = UIColor.white

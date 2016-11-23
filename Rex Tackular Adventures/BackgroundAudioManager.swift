@@ -11,8 +11,8 @@ import AVFoundation
 var backgroundMusicPlayer = AVAudioPlayer()
 let jungleAudioFileName = "jungleSounds"
 
-class backgroundAudioManager: NSObject {
-    static let shared = backgroundAudioManager()
+class BGAudio: NSObject {
+    static let shared = BGAudio()
     let audioSession = AVAudioSession.sharedInstance()
 
     override init() {

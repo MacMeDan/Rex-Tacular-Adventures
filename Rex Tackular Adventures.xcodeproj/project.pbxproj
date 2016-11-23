@@ -28,7 +28,7 @@
 		37F2265B1D554E930072FC84 /* CrateAnimationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F226591D554E930072FC84 /* CrateAnimationsView.swift */; };
 		37F226631D5550290072FC84 /* Opencrate.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F226621D5550290072FC84 /* Opencrate.png */; };
 		37F8CD521DCD330000DADF7A /* jungleSounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 37F8CD511DCD330000DADF7A /* jungleSounds.mp3 */; };
-		37F8CD541DCD333E00DADF7A /* backgroundAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F8CD531DCD333E00DADF7A /* backgroundAudioManager.swift */; };
+		37F8CD541DCD333E00DADF7A /* BackgroundAudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F8CD531DCD333E00DADF7A /* BackgroundAudioManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,7 @@
 		37F226591D554E930072FC84 /* CrateAnimationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrateAnimationsView.swift; sourceTree = "<group>"; };
 		37F226621D5550290072FC84 /* Opencrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Opencrate.png; sourceTree = "<group>"; };
 		37F8CD511DCD330000DADF7A /* jungleSounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jungleSounds.mp3; sourceTree = "<group>"; };
-		37F8CD531DCD333E00DADF7A /* backgroundAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = backgroundAudioManager.swift; sourceTree = "<group>"; };
+		37F8CD531DCD333E00DADF7A /* BackgroundAudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAudioManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 				3738AE9F1D3D894E00BBC67D /* InitalCollectionViewController.swift */,
 				37A02B421D70F89100C1C82F /* TestingCollectionViewController.swift */,
 				372C63351D4E7AC300EB32A8 /* AnimalGameViewController.swift */,
-				37F8CD531DCD333E00DADF7A /* backgroundAudioManager.swift */,
+				37F8CD531DCD333E00DADF7A /* BackgroundAudioManager.swift */,
 				37B3D2D41D7CE6590037914D /* NumbersGame.swift */,
 				37B0F2C71D835CCB007AEBE2 /* GamesStruct.swift */,
 				379574CE1D5E7141007BC758 /* DancingAnimalView.swift */,
@@ -290,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37F8CD541DCD333E00DADF7A /* backgroundAudioManager.swift in Sources */,
+				37F8CD541DCD333E00DADF7A /* BackgroundAudioManager.swift in Sources */,
 				37B0F2C81D835CCB007AEBE2 /* GamesStruct.swift in Sources */,
 				37A02B431D70F89100C1C82F /* TestingCollectionViewController.swift in Sources */,
 				37B0F2CC1D836714007AEBE2 /* Speakable.swift in Sources */,
